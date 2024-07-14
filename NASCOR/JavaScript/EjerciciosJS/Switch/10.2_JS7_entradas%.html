@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de entradas</title>
+    <style>
+        div{
+            background-color: blueviolet;
+            border: 2px solid black;
+            width: max-content;
+            margin: auto;
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h2>Compra tu entrada</h2>
+    <p>Cada entrada vale 10€ pero tendrás descuento cuantas más entadas compres hasta un límite de 5</p>
+    <p>¡A partir de la quinta entrada, ahorraras un 25% por entrada!</p><br>
+    <input type="number" max="20" min="0" name="" id="numeroEntradas" placeholder="Número Entradas" style="width: 120px;">
+    <button onclick="calcularPrecio()">Calcular Precio</button>
+    <p id="resultado"></p>
+    </div>
+    
+
+    <script>
+        function calcularPrecio () {
+            const numeroEntradas = Number(document.getElementById("numeroEntradas").value); 
+            var precio = 10;
+            while(isNaN(numeroEntradas) || numeroEntradas<=0){
+                alert('Introduzca el número de entradas que quiera adquirir')
+                return
+            }
+            switch(numeroEntradas){  //En este caso podemos usar directamente el nombre de la variable para ahorrar codigo pues no hay varemos. El true se utiliza cuando hay rangos precio>o< qué X etc... como en el caso del ejercicio de las notas.
+                case 1:
+                    precio=precio;
+                    break;
+                case 2:
+                    precio= numeroEntradas*precio*0.90;
+                    break;
+                case 3:
+                    precio= numeroEntradas*precio*0.85;
+                    break;
+                case 4: 
+                    precio= numeroEntradas*precio*0.80;
+                    break;
+                default: 
+                    precio= numeroEntradas*precio*0.75
+            }  
+            document.getElementById('resultado').innerHTML = 'El precio con descuento es: ' + precio  + ' €' 
+        }  
+            
+           /*if (numeroEntradas== 1){
+                PrecioEntrada= PrecioEntrada                      
+            } else if (numeroEntradas==2){
+                PrecioEntrada= (numeroEntradas*PrecioEntrada*0.90)
+            } else if (numeroEntradas==3){
+                PrecioEntrada= (numeroEntradas*PrecioEntrada*0.85)
+            } else if (numeroEntradas==4){
+                PrecioEntrada= (numeroEntradas*PrecioEntrada*0.80)
+            } else {
+                PrecioEntrada= (numeroEntradas*PrecioEntrada*0.75)
+            } 
+            */
+        
+    </script>
+</body>
+</html>

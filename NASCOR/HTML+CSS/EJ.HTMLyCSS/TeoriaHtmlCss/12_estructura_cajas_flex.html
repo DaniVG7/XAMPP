@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Estructura flex</title>
+    <style>
+        main{
+            width: 80%; /*anchoe de la caja contenedora */
+            margin: auto; /*centrar la caja contenedora */
+            border: 2px solid blue;
+            padding: 10px;   /*margen interior */      
+            max-width: 1500px;  /* con esto la pagina respetará el ancho de 80% mientras no supere los 1500px, (ancho maximo)*/      
+
+        }
+        header {
+            border: solid 2px green;
+            height: 80px;
+            margin-bottom: 10px;  /*margen exterior inferior */
+        }
+        nav{
+            border: 2px solid salmon;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+        section{
+            border: 2px solid grey;
+            /*height: 200px;*/
+            margin-bottom: 10px;
+            padding: 10px;
+           
+        }
+        .flex {
+            display: flex; /*siempre indica la disposicion de elementos que se encuentren dentro de la caja */
+            flex-wrap: wrap; /* si queremos activar el efecto multilinea, por defecto viene como no wrap */
+            justify-content: space-evenly;  /*Distrbución  horizontal de los elementos con los margenes equitativos */
+            gap: 5px; /*tambien sirve para añadir margenes exteriores pero solo en flex */
+
+        }
+        article{
+            border: 2px solid goldenrod;
+            /*height: 150px;*/
+            width: 45%; /*ancho de la caja para que al poner 2 articulos esten bien espaciados*/  
+            margin: 10px;          
+
+        }
+        footer{
+            border: 2px solid teal;
+            height: 30px;
+        }
+        
+    </style>
+</head>
+    <main>
+        <header>
+            <img src="imagenes/kings-league_logo-summa-1024x577.png" height="60">
+        </header>
+        <nav></nav>
+        <section>
+            <h2>Seccion 1</h2>
+            <div class="flex">
+                <article>
+                    <h3>articulo 1</h3>
+                </article>
+                <article>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita non ad alias culpa assumenda dignissimos. Deleniti earum hic, laborum necessitatibus illum autem quisquam praesentium ex obcaecati.</p>
+                </article>
+                <article></article>
+                <article></article>
+                <article></article>
+                <article></article>
+            </div>
+        </section>
+        <section>
+            <h2>Seccion 2</h2>
+            <div class="flex">
+                <article>
+                    <h3>Artículo 2.1</h3>
+                </article>
+                <article></article>
+            </div>
+        </section>
+        <footer></footer>
+    </main>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,52 @@
+<html>
+<head>
+	<script type="text/javascript" src="15e.js"></script>
+</head>
+<body onload="recuperarDatos();">
+<h2>Bebidas</h2>
+<ol id="listaBebidas">
+<li>Coffee</li>
+<li>Tea</li>
+<li>Milk</li>
+</ol>
+Selecciona una bebiba: <input type="number" id="numbebida">
+<button onclick="seleccionar('bebida','listaBebidas')">Seleccionar</button>
+Añadir bebida: <input type="text" id="nombreBebida">
+<button onclick="anadir('Bebida','listaBebidas')">Añadir bebida</button>
+Eliminar bebida: <input type="number" id="numBebidaEliminar">
+<button onclick="borrar('Bebida','listaBebidas')">Borrar bebida</button>
+<p id="demobebida"></p>
+<hr>
+<h2>Pastas</h2>
+<ol id="listaPastas">
+	<li>Donuts de chocolate</li>
+	<li>Donuts normales</li>
+	<li>Ensaimadas</li>
+</ol>
+Selecciona una pasta: <input type="number" id="numpasta">
+<button onclick="seleccionar('pasta','listaPastas')">Seleccionar</button>
+Añadir Pasta: <input type="text" id="nombrePasta">
+<button onclick="anadir('Pasta','listaPastas')">Añadir pasta</button>
+Eliminar pasta: <input type="number" id="numPastaEliminar">
+<button onclick="borrar('Pasta','listaPastas')">Borrar pasta</button>
+<p id="demopasta"></p>
+
+<!input type="button" value="Guardar datos" onclick="guardarDatos()">
+<!input type="button" value="Recuperar datos" onclick="recuperarDatos()">
+
+
+</body>
+</html>
+<!--
+1: x[0]='<li>Coffee</li>'
+2: x[1]='<li>Tea</li>'
+3: x[2]='<li>Milk</li>'
+-->
+
+
+
+
+
+
+
+

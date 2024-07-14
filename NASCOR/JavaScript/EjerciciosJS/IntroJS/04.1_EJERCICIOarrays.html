@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ArraysMeses</title>
+    <style>
+        body{
+            text-align: justify;
+            color: blue;
+            border: 2px solid red;
+            width: max-content;
+            margin: auto;
+            background-color:beige;
+            padding: 20px;
+            padding-bottom: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+    </style>
+  </head>
+  <body>
+    <p id="meses"> Los meses del año son: </p>
+    <p>Tambien puedes mostrarlos en vertical:</p>
+    <p id="Enero"></p>
+    <p id="Febrero"></p>
+    <p id="Marzo"></p>
+    <p id="Abril"></p>
+    <p id="Mayo"></p>
+    <p id="Junio"></p>
+    <p id="Julio"></p>
+    <p id="Agosto"></p>
+    <p id="Septiembre"></p>
+    <p id="Octubre"></p>
+    <p id="Noviembre"></p>
+    <p id="Diciembre"></p>
+    <p id="mesesvertical"> También puedes ponerlo vertical así en un mismo párrafo:</p>
+    <script>
+        var meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+        /*alert(meses[0]);
+        alert(meses[1]);
+        alert(meses[2]);
+        alert(meses[3]);
+        alert(meses[4]);
+        alert(meses[5]); Con este método conseguimos que nos salgan alertas de 1 en 1 diciendo los meses del año en orden.
+        alert(meses[6]);
+        alert(meses[7]);
+        alert(meses[8]);
+        alert(meses[9]);
+        alert(meses[10]);
+        alert(meses[11]); */
+        document.getElementById("meses").innerHTML += ' ' + meses[0]+ ', ' + meses[1]+', ' + meses[2]+', ' + meses[3]+', ' + meses[4]+', ' + meses[5]+', ' + meses[6]+', ' + meses[7]+', ' + meses[8]+', ' + meses[9]+', ' + meses[10]+', ' + meses[11];
+        document.getElementById("Enero").innerHTML = meses[0];
+        document.getElementById("Febrero").innerHTML = meses[1];
+        document.getElementById("Marzo").innerHTML = meses[2];
+        document.getElementById("Abril").innerHTML = meses[3];
+        document.getElementById("Mayo").innerHTML = meses[4];
+        document.getElementById("Junio").innerHTML = meses[5];
+        document.getElementById("Julio").innerHTML = meses[6]; // Se añade uno a cada parrafo para que salga vertical
+        document.getElementById("Agosto").innerHTML = meses[7];
+        document.getElementById("Septiembre").innerHTML = meses[8];
+        document.getElementById("Octubre").innerHTML = meses[9];
+        document.getElementById("Noviembre").innerHTML = meses[10];
+        document.getElementById("Diciembre").innerHTML = meses[11];
+        
+        document.getElementById("mesesvertical").innerHTML += '<br><br>' + meses[0]+ ', <br>' + meses[1]+',<br> ' + meses[2]+',<br> ' + meses[3]+',<br> ' + meses[4]+',<br> ' + meses[5]+',<br> ' + meses[6]+',<br> ' + meses[7]+',<br> ' + meses[8]+',<br> ' + meses[9]+',<br> ' + meses[10]+',<br> ' + meses[11];
+        //De esta forma se hace un salto entre cada mes para que tambien salga en vertical pero dentro de la misma caja (parrafo en este caso).
+      </script>
+  </body>
+</html>

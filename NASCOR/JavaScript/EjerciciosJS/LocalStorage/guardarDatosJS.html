@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardar Datos</title>
+</head>
+<body><!--Los datos solo se guardan en ámbito navegador, si es en otro navegador u otro PC no se guardarán.-->
+
+    <label for="">Nombre: </label><input type="text" name="nombre" id="nombre">
+    <input type="button" name="" id="guardar" value='Guardar' onclick="guardarNombre()">
+    <input type="button" name="recuperar" id="recuperar" value="Recuperar Nombre" onclick="recuperarNombre()">
+    <p id="demo"></p>
+    
+
+
+    <script>
+
+        function guardarNombre(){
+            var nombre= document.getElementById('nombre').value  //recuperamos la variable nombre para guardarla
+            localStorage.setItem('nombre',nombre) // codificamos el setItem en localStorage con el nombre de lo que queremos guardar y la variable que queremos guardar en nuestro caso var nombre.
+            
+        }
+        function recuperarNombre(){
+            var nombre = localStorage.getItem('nombre') //guardamos en una variable el elemento recuperado con getItem del local storage
+            document.getElementById('demo').innerHTML = 'El nombre recuperado es: '+ nombre  //Imprimimos el dato guardado.
+        }
+
+    </script>
+</body>
+</html>
+
+
+
+<!--function recuperarListas() {
+    var bebidasRecuperadas = JSON.parse(localStorage.getItem('bebidas')); // Cambiado 'listaB' por 'bebidas'
+    var pastasRecuperadas = JSON.parse(localStorage.getItem('pastas')); // Cambiado 'listaP' por 'pastas'
+
+    var listaBRecuperadas = document.getElementById('bebidasRecuperadas');
+    var listaPRecuperadas = document.getElementById('pastasRecuperadas');
+
+    listaBRecuperadas.innerHTML = ''; // Limpiar contenido anterior
+    listaPRecuperadas.innerHTML = ''; // Limpiar contenido anterior
+
+    if (bebidasRecuperadas) {
+        for (var i = 0; i < bebidasRecuperadas.length; i++) {
+            var listaBRecuperada = document.createElement('li');
+            var nodoTexto = document.createTextNode(bebidasRecuperadas[i]);
+            listaBRecuperada.appendChild(nodoTexto);
+            listaBRecuperadas.appendChild(listaBRecuperada);
+        }
+    }
+
+    if (pastasRecuperadas) {
+        for (var i = 0; i < pastasRecuperadas.length; i++) {
+            var listaPRecuperada = document.createElement('li');
+            var nodoTexto = document.createTextNode(pastasRecuperadas[i]);
+            listaPRecuperada.appendChild(nodoTexto);
+            listaPRecuperadas.appendChild(listaPRecuperada);
+        }
+    }
+}
+-->

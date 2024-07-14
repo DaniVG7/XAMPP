@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DisplayGrid</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body,
+      .contenedor {
+        height: 100%;
+      }
+
+      main {
+        width: 154px;
+        /*es la suma de los 150 px de cada caja + 2 de cada borde*/
+        margin: 0 auto;
+        /*para centrar la columna independientemente del tamaño de la pantalla*/
+        display: grid;
+        align-items: center;
+      }
+
+      div {
+        border: 2px solid black;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        display: inline-grid;
+        /*Es de tipo block, por lo que por defecto se situan en vertical una debajo de la otra*/
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 16px;
+      }
+
+      .circulo1 {
+        background-color: blue;
+      }
+
+      .circulo2 {
+        background-color: green;
+      }
+
+      .circulo3 {
+        background-color: grey;
+      }
+
+      .circulo4 {
+        background-color: blueviolet;
+      }
+
+      /*trabajamos de forma mobilefirst, esto significa trabajar de pantallas mas pequeñas a más grande porque sino se sobreescribiran los valores!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+      @media (min-width: 400px) { /*por defecto la pagina se ve en disposición vertical, con esto diremos que cuando el dispositivo tenga 400px como minimo, se disposnga en 2x2*/
+        .contenedor {
+          width: 390px;
+          grid-template-columns: 50% 50%;
+          /*Para posicionarlo en 2x2 */
+          align-content: center;
+          /*para poner las 4 cajas pegadas en el centro*/
+          gap: 10px;
+          /*espaciado entre cada circulo*/
+          box-sizing: border-box;
+        }
+      }
+
+      @media (min-width: 770px) { /*cuando el dispositivo tenga 770px o más se dispondra en horizontal los 4 elementos ocupando el 25% cada uno */
+        .contenedor {
+          width: 760px;
+          grid-template-columns: 25% 25% 25% 25%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="contenedor">
+      <div class="circulo1"><span>Elemento 1</span></div>
+      <!--Esta caja span es para tener cajas hijas para aplicar display grid-->
+      <div class="circulo2"><span>Elemento 2</span></div>
+      <div class="circulo3"><span>Elemento 3</span></div>
+      <div class="circulo4"><span>Elemento 4</span></div>
+    </main>
+  </body>
+</html>

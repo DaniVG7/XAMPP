@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardar Datos Array</title>
+</head>
+<body><!--Los datos solo se guardan en ámbito navegador, si es en otro navegador u otro PC no se guardarán.-->
+
+    <label for="">Nombre: </label><input type="text" name="nombre" id="nombre">
+    <input type="button" name="" id="guardar" value='Guardar' onclick="guardarNombre()">
+    <input type="button" name="recuperar" id="recuperar" value="Recuperar Nombre" onclick="recuperarNombre()">
+    <p id="resultado"></p>
+    
+
+
+    <script>
+        function guardarNombre(){
+            nombre= document.getElementById('nombre').value  //recuperamos la variable nombre para guardarla
+            let personas = JSON.parse(localStorage.getItem('personas')); //hacemos un Json de la variable personas para que se pueda guardar
+            if(personas===null){            // El json estará definido como null y le decimos que si es null, cree un array.
+                personas = new Array()
+            }
+            personas.push(nombre)    //En ese array que vaya almacenando todos los nombres 
+            
+            //convertir el array personas en un JSON para que se pueda guardar (no se puede guardar un array)
+            let varJSON = JSON.stringify(personas);
+            localStorage.setItem('personas',varJSON) // codificamos el setItem en localStorage con el nombre de lo que queremos guardar y la variable que queremos guardar en nuestro caso var nombre.
+            
+        }
+        function recuperarNombre(){
+            let personas = JSON.parse(localStorage.getItem('personas'));
+            for(i=0; i<personas.length; i++){
+            document.getElementById('resultado').innerHTML += 'Los nombres recuperados son: '+ personas[i] + '<br>' //Imprimimos el dato guardado.
+            }
+        }
+
+    </script>
+</body>
+</html>

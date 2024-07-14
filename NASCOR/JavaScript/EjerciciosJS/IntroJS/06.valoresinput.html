@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valores</title>
+</head>
+<body>
+    <p id="mensaje"> El número más grande es:</p>
+    <p id="suma"> La suma de ambos números es:</p>
+
+    <script>
+        var numero1;
+        var numero2;
+        numero1 = Number(prompt('Introduzca un número'));
+        numero2 =Number(prompt('Introduzca otro número'));
+        if (numero1>numero2){
+            mensaje=numero1
+        }
+        else {
+            mensaje=numero2
+        }
+
+        document.getElementById('mensaje').innerHTML += mensaje
+        document.getElementById('suma').innerHTML += numero1+numero2
+
+    </script>
+</body>
+</html>

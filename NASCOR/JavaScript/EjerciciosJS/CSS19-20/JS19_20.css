@@ -1,0 +1,27 @@
+#formulario{
+    background-color: aquamarine;
+    max-width: max-content;
+    padding: 20px;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 20px;  
+
+}
+form.input{
+    width:  30%;
+    }
+
+label{
+        width: 50%;
+        display: inline-block;
+        font-weight: bold;
+        vertical-align: top; 
+    }
+    
+.error{
+    color: red;
+}
+.correcto{
+    color: green;
+}
+

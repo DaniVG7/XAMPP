@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNI</title>
+</head>
+<body>
+    <script>
+        var nDni = Number(prompt("Ingrese el numero de su DNI "));
+        var lDni = (prompt("Ingrese la letra de su DNI ")); 
+        var bLetra =['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H','L', 'C', 'K', 'E'];
+        var rDni;
+        if (nDni<=999999999 && nDni>=0) {
+            rDni = (nDni%23);
+            if (lDni.toUpperCase() === bLetra[rDni]) {
+                alert("El DNI es correcto");
+            }
+            else {
+                alert("La letra de su DNI es Incorrecta");
+            }
+        }
+        else {
+            alert(" El Número de su DNI es incorrecto")
+        }
+    </script>
+</body>
+</html>

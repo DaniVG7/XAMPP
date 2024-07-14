@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF/ELSE</title>
+</head>
+<body>
+    <p>Cada entrada vale 10€ pero tendrás descuento cuantas más entadas compres hasta un límite de 5</p>
+    <label for="">Número de entradas:</label><input type="number" min="1" name="" id="numEntradas">
+    <button onclick="calcularPrecio()">Calcular Precio</button>
+    <p id="precio"></p>
+    
+    <script>
+        function calcularPrecio () {
+            const numeroEntradas = Number(document.getElementById("numEntradas").value); 
+            let PrecioEntrada;
+            PrecioEntrada= 10
+            if (numeroEntradas== 1){
+                PrecioEntrada= PrecioEntrada                      
+            } else if (numeroEntradas==2){
+                PrecioEntrada= (numeroEntradas*PrecioEntrada*0.90)
+            } else if (numeroEntradas==3){
+                PrecioEntrada= (numeroEntradas*PrecioEntrada*0.85)
+            } else if (numeroEntradas==4){
+                PrecioEntrada= (numeroEntradas*PrecioEntrada*0.80)
+            } else {
+                PrecioEntrada= (numeroEntradas*PrecioEntrada*0.75)
+            } 
+            
+            document.getElementById("precio").innerHTML += "El precio para "+ numeroEntradas + " entradas es" + " " + PrecioEntrada + ' ' + "€"; 
+        }
+        
+    </script>
+</body>

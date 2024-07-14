@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de entradas</title>
+    <style>
+        div{
+            background-color: blueviolet;
+            border: 2px solid black;
+            width: max-content;
+            margin: auto;
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h2>Compra tu entrada</h2>
+    <form action="PHP5EntradasIf.php" method="post">
+    <p>Cada entrada vale 10€ pero tendrás descuento cuantas más entadas compres hasta un límite de 5</p>
+    <p>¡A partir de la quinta entrada, ahorraras un 25% por entrada!</p><br>
+    <input type="number" name="numeroEntradas" id="numeroEntradas" placeholder="Número Entradas" style="width: 120px;">
+    <input type="submit" value="Calcular Precio">
+    </form>
+    </div>
+</body>
+</html>

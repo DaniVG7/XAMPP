@@ -1,0 +1,37 @@
+<?php  //clase conjuntoCoches con las funciones para aplicar 
+require_once "cocheClass.php";
+class conjuntoCoches {
+	public $coches;
+		
+	public function __construct() {
+		$data = file_get_contents("coches.dat");
+		$this->coches = unserialize($data,['allowed_classes' => true]);
+	}
+	public function verCoches() {
+		echo '<main>';
+		foreach ($this->coches as $clave => $coche) {
+			echo '<div class="verCoches"><a href="borrarCoche.php?posicion='.$clave.'"><button style="background-color:white"><img src="papelera.jpg"></button></a>';
+			echo '<a href="modificarCoche.php?posicion='.$clave.'"><button style="background-color:green"><strong>Modificar</strong></button></a><br>';	
+			$coche->mostrarDatos();		
+			echo '</div>';
+		}
+		echo '</main>';
+	}
+	public function borrarCoche($pos) {
+		unset($this->coches[$pos]);
+		$this->guardarCoches();
+	}
+	public function anadirCoche($coche) {
+		$this->coches[] = $coche;
+		$this->guardarCoches();		
+	}
+	public function modificarCoche($pos,$coche) {
+		$this->coches[$pos] = $coche;
+		$this->guardarCoches();		
+	}
+	public function guardarCoches() {
+		$file= fopen("coches.dat","w");
+		fwrite($file,serialize($this->coches));
+		fclose($file);	
+	}
+}

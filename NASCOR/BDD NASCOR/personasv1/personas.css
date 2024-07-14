@@ -1,0 +1,54 @@
+img {
+	width: 250px;
+	height: 150px;
+}
+a{
+	margin: auto;
+	text-decoration: none
+}
+#Formulario{
+	border: 10px double rgb(81, 32, 32);
+	width: 400px;
+	padding: 20px;
+	margin: auto;
+	border-radius: 10px;
+	background-image: url('imgFormulario.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: turquoise; 
+	text-align: center
+}
+
+
+button{
+	margin-bottom: 20px;
+	border: none; 
+	color: black; 
+	padding: 10px 15px; 
+	cursor: pointer; 
+	border-radius: 5px; 
+}
+.btn1{
+	background-color: white;
+	border: 2px solid #007bff;
+	transition: 0.5s;
+} 
+.btn1:hover {
+	background: #0b7dda; 
+	color: white;
+}
+.btn2 {
+	background-color: white;
+	border: 2px solid #04AA6D;
+	transition: 0.5s;
+} 
+.btn2:hover {
+	background-color: #46a049;
+	color: white;
+}
+input[type="text"]{
+	border-radius: 15px;
+	height: 40px;
+	width: 300px;
+	opacity: 0.7;
+}

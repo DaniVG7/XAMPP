@@ -1,0 +1,200 @@
+*{
+    color: blue;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightcyan;
+    
+}
+
+main {
+    position: relative;
+    max-width: 1250px;
+    margin: auto;
+    width: 1050px;
+    
+
+}
+
+header {
+    border: 1px solid blue;
+    margin-bottom: 5px;
+    background-color: white;
+    box-shadow: 2px 2px 2px black;
+}
+
+
+.google {
+    position: absolute;
+    right: 60px;
+    top: 15px;
+}
+
+.cloud {
+    position: absolute;
+    right: 20px;
+    top: 50px;
+}
+
+.lupa {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    margin: 0px;
+
+}
+
+nav {
+    height: 40px;
+    background-color: lightblue;
+    border: 1px solid lightseagreen;
+    margin-bottom: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    box-shadow: 2px 2px 2px black;
+
+
+}
+
+nav button {
+    margin: auto;
+    border: none;
+    background-color: lightblue;
+    height: 100%;
+    color: teal;
+    font-weight: bold;
+
+
+}
+
+nav button:hover {
+    background-color: yellow;
+    cursor: pointer;
+}
+
+div {
+    border: 2px solid grey;
+    margin-bottom: 10px;
+    background-color: white;
+    box-shadow: 2px 2px 2px black;
+    padding-top: 0;
+
+}
+
+
+
+.slider {
+    float: left;
+    width: 50%;
+    height: 400px;
+    margin-right: 10px;
+
+}
+
+section h1 {
+    color: blueviolet;
+    margin-top: 0;
+}
+
+section h2 {
+    color: blueviolet;
+}
+
+article h4 {
+    margin-top: 5px;
+    color: blue;
+    margin-bottom: 5px;
+}
+
+
+.listas {
+    display: flex;
+    border: none;
+    font-weight: bold;
+    box-shadow: none
+}
+
+.lista-izquierda {
+    width: 50%;
+    list-style: none;
+    color: purple;
+    padding: 0;
+}
+
+.lista-derecha {
+    float: left;
+    width: 50%;
+    list-style: none;
+    color: purple;
+}
+
+section {
+    margin-bottom: 10px;
+    overflow: hidden;  /*para ajustar el conteindo de la caja contenedora al a propia caja y no se descuadren ni se acoplen al de arriba con los elementos flotantes. */
+}
+
+#seccion2 {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 30px;
+    
+}
+
+article {
+    border: 2px solid green;
+    width: 47%;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 5px;
+    box-shadow: 3px 3px 3px teal
+}
+
+article:hover {
+    background-color: rgb(47, 255, 210);
+    cursor: pointer;
+}
+
+
+/*en este caso se podria haber usado el atributo class con distintos nombres en todas las fotos, pero se hace con uno mismo porque se puede repetir y solo definiriamos este atributo class */
+.imagenarticulo {
+    float: left;
+    width: 40%;
+    padding-bottom: 20px;
+    height: 135px;
+    margin-right: 10px;
+}
+
+p {
+    text-align: justify;
+}
+
+footer {
+    background-color: lemonchiffon;
+    height: 150px;
+    margin-bottom: 10px;
+    border: 2px solid goldenrod;
+    position: relative; /*Esto se hace para que las imagenes con posicion absoluta se situen dentro del footer*/
+    box-shadow: 2px 2px 2px black;
+}
+
+.pie {
+    background-color: lemonchiffon;
+    border: none;
+    position: absolute;
+    bottom: 1px;
+    right: 10px;
+    box-shadow: none;
+}
+
+#flecha {
+    border: none;
+}
+
+.flecha {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}

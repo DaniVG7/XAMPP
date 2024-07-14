@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOTAS
+    </title>
+</head>
+<body>
+    <input type="number" max="20" min="0" name="" id="nota" placeholder="Nota Numérica" style="width: 120px;">
+    <button onclick="calcularLetra()">Calcular Letra</button>
+    <p id="resultado"></p>
+    
+
+    <script>
+        function calcularLetra () {
+            const nota = Number(document.getElementById("nota").value); 
+            var notaLetra;
+            switch(true){
+                case ((nota<=20) && (nota>=19)):
+                    notaLetra='A';
+                    break;
+                case ((nota<19) && (nota>=16)):
+                    notaLetra='B';
+                    break;
+                case ((nota<16) && (nota>=12)):
+                    notaLetra='C';
+                    break
+                case ((nota<12) && (nota>=9)): 
+                    notaLetra='D';
+                    break;
+                case ((nota<9) && (nota>=0)): 
+                    notaLetra='E';
+                    break;
+                default: 
+                    notaLetra='Introduzca una nota real'
+            }  
+            document.getElementById('resultado').innerHTML = 'La nota es: ' + notaLetra          
+        }
+            
+            
+           
+        
+    </script>
+</body>
+</html>

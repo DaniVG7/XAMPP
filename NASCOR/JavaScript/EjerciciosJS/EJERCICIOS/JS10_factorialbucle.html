@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForFact</title>
+</head>
+<body>
+
+    Escribe un número <input type="number" id="numintroducido" min=0 > <br>
+
+
+    <button onclick="factorizar()"> Factorizar</button>
+    <p id="resultado"></p>
+
+
+    <script>
+        /* var num = leer ("Numero del que queremos calcular el factorial");
+           var factorial = 1;
+           for (var i =1; i<=num; i++){    Aqui i se inicia en 1 porque sino siempre nos daría 0 al calcular el factorial ya que siempre multiplicariamos por 0
+            factorial= factorial* i
+           }
+
+           escribir en pantalla (factorial) */
+        function factorizar(){
+            var num= Number(document.getElementById('numintroducido').value);
+            var factorial= 1;
+            for (i=1; i<=num; i++){ // se puede iniciar la i en 2 ya que el valor 1 ya es el de factorial.
+                factorial= (factorial * i)
+            }
+            document.getElementById('resultado').innerHTML = factorial;
+
+        }
+        
+    </script>
+    
+</body>
+</html>

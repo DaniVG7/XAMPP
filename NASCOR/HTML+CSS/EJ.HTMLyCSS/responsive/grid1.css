@@ -1,0 +1,50 @@
+.circulo {
+	border: 2px solid black;
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	display: inline-grid;
+	justify-content: center;
+	align-items: center;
+	background-color: lightpink;
+}
+.fondorojo {
+	background-color: lightcoral;
+}
+.fondoazul {
+	background-color: lightblue;
+}
+.fondogris {
+	background-color: lightgrey;
+}
+.fondoverde {
+	background-color: lightgreen;
+}
+.contenedor {
+	width: 154px;
+	margin: 0 auto;
+	display: grid;
+	align-items: center;
+}
+html, body, .contenedor {
+	height: 100%;
+}
+@media (min-width: 400px) {
+	.contenedor {
+		width: 380px;
+		grid-template-columns: 50% 50%;
+		justify-content: center;
+		align-content: center;
+		gap: 10px;
+		justify-items: center;
+	}
+}
+@media (min-width: 768px) {
+	.contenedor {
+		width:750px;
+		grid-template-columns:25% 25% 25% 25%;
+	}
+}
+
+
+

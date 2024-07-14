@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Tabla con filas y columnas agrupadas</title>
+
+    <style>
+        table,
+        td,
+        th {
+            border: 1px solid grey;
+            padding: 5px;
+            margin: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <table> <!--Lo primero es contar el número de filas e introducirlas (4)-->
+        <tr><!--Ahora miraremos cuantas columnas e introducirlas (3)-->
+            <th rowspan="2">Programa</th>
+            <th colspan="2">Curso</th>
+        </tr>
+        <tr>
+            <th>Nombre</th>
+            <th>Duración</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Business Integration</td>
+            <td>Persistencia</td>
+            <td>24 horas</td>
+        </tr>
+        <tr>
+            <td>Web services</td>
+            <td>24 horas</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

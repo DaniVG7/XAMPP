@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador DNI</title>
+    <style>
+        main{
+            max-width: max-content;
+            margin: auto;
+            padding: 20px;
+            background-color: wheat;
+            border: 2px solid black;
+        }
+        h1{
+            margin: 20px;
+        }
+        label{
+            display: block;
+            padding: 20px;
+        }
+        input{
+            margin: 20px;
+        }
+        button{
+            display: block;
+            margin: 20px;  
+        } 
+        #resultadoDni{
+            margin: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Validador de DNI</h1>
+        <label for=""> Introduzca su NÚMERO de DNI sin la letra</label>
+        <input type="number" name="" id="numerointroducido" min="0" max="99999999" required placeholder="Numero DNI" autofocus>
+        <label for="">Introduzca la LETRA de su DNI</label>
+        <input type="text" id="letraintroducida" style="width: 60px;" required placeholder="Letra DNI" >
+        <button onclick="calcularDNI ()"> Comprobar </button>
+        <div id="resultadoDni"></div>
+    </main>
+    <script>
+        function calcularDNI () {
+            var arrayletra = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+            var resultadoLetra;
+            const numeroDNI = Number(document.getElementById("numerointroducido").value); //Declaramos numeroDNI como la variable que contiene el valor de lo que el usuario introduce en el input con ID ''numerointroducido''
+            const letraDNI = document.getElementById("letraintroducida").value; // Lo mismo con el input ''letraintroducida''
+            if (numeroDNI <0  || numeroDNI > 99999999){
+                resultadoDni = "Este número de DNI no es válido";      //Decimos que si el numeroDni (que introduce el user) es más grande de 99.999.999 o menor que 0, el numero de DNI no es válido.
+            }
+            else{
+                resultadoLetra = arrayletra[numeroDNI % 23]; // asignamos a la variable resultadoLetra el valor del array de la operacion (numeroDNI % 23) entre corchetes para que coja el valor del array 
+                if (letraDNI.toUpperCase() === resultadoLetra){ //Decimos que si la letraDni(introducida por el user en el input) es = que la que nos ha salido a nosotros
+                    resultadoDni = "DNI VÁLIDO";              //significa que el DNI es válido.
+                }
+                else {                                                              //en caso contrario
+                    resultadoDni = "La letra del DNI no es correcta"                //La letra es incorrecta pues aqui ya damos por hecho que el número SI es correcto.
+                }
+            }
+            document.getElementById('resultadoDni').innerHTML = resultadoDni    //mostramos la variable resultadoDni en el id 'resultadoDni' para que diga si es correcto o no lo introducido por el usuario
+            
+        }
+
+    </script>
+</body>
+</html>

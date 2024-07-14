@@ -1,0 +1,53 @@
+body{
+	max-width: 1300px;
+	margin: 0 auto;
+	background-color: rgba(114, 186, 94, 0.35);
+}
+main{
+	display:grid;
+	grid-template-columns: auto auto auto;
+}
+.alumno{
+	border: 2px dashed white;
+	width: max-content;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-radius: 15px;
+	background-color: lightblue;
+}
+
+.curso{
+	border: 2px dashed white;
+	width: max-content;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+.curso button{
+	margin-left: 20px;
+}
+
+.cursos{
+	
+	width: max-content;
+	padding: 10px;
+	margin-bottom: 10px;
+	background-color: lightblue;
+	border-radius: 15px;
+	border: 2px dashed white;
+
+}
+button{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+.profes{
+	width: max-content;
+	padding: 10px;
+	margin-bottom: 10px;
+	background-color: lightblue;
+	border-radius: 15px;
+	border: 2px dashed white;
+
+}

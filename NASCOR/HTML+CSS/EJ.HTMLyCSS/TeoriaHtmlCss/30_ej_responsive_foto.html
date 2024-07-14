@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive3Foto</title>
+    <style>
+        /*.img{
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        } solo valido si ponemos la etiqueta img*/
+        
+        *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+        .imagen{
+            background-image: url(img/desarrollo.webp);
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        @media (min-width: 768px) {
+            div{
+                column-count: 2;
+                column-gap: 10px;
+                column-rule: 2px solid lightblue;                
+            }
+            .imagen{
+                height: 300px;
+                background-image: url(img/cobol.jpg); /*cambia la imagen al hacer la pantalla mas pequeña*/
+                
+            }
+            
+        }
+        @media (min-width: 1000px){
+            main{
+             margin: auto;
+             width: 70%;
+             height: 100vh;
+             max-width: 900px;
+            }
+            div{
+                column-count: 3;
+                /*column-gap: 10px;    No hay que volvera escribir todo, solo lo que queremos cambiar!!!!
+                column-rule: 3px solid lightblue;*/  
+            }
+            .imagen{
+                height: 200px;
+                background-image: url(img/formacion.jpg);
+            }
+            
+
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="imagen">
+
+        </div>
+        <!--<img src="img/paginasweb.png" alt="paginasweb">-->
+        <div>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, nemo, placeat excepturi velit eos reprehenderit est porro incidunt, cum omnis corrupti doloremque a dolore? Enim consequuntur adipisci cupiditate tempora ea?</p>        
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa error dicta, ullam praesentium est laudantium quas non nulla maxime. Necessitatibus corporis minus magnam praesentium? Eveniet sequi nostrum consequatur cum amet.</p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam dignissimos cupiditate obcaecati itaque tempora. Repudiandae illo distinctio architecto voluptate? Natus dignissimos ducimus hic excepturi, laudantium ab animi tempore! Et, pariatur!
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas doloremque sit quam, mollitia aperiam accusantium necessitatibus! Enim atque fuga, unde omnis nam veritatis odit quos consectetur voluptates ut nulla delectus.</p>
+        </div>
+
+    </main>
+    
+</body>
+</html>

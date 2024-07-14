@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive1 grid</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+      }
+      body {
+        max-width: 1200px;
+        margin: auto;
+        padding: 10px;
+      }
+
+      @media (min-width: 768px) {
+        main {
+          display: grid;
+          grid-template-columns: 30% 70%;
+          gap: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="contenedor">
+      <header>
+        <h3>¿DUDAS?</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+          dolor architecto quia, necessitatibus in molestiae voluptatum delectus
+          itaque quibusdam aut. Sequi vero eos itaque ad pariatur libero dolorum
+          animi deserunt?
+        </p>
+        <a href="mailto:dvg9383@gmail.com">Contacta con nosotros</a>
+      </header>
+      <div>
+        <h2>QUIÉNES SOMOS</h2>
+        <hr />
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum
+          magnam temporibus architecto tempora sed suscipit omnis est mollitia
+          consectetur? Autem nemo impedit libero amet fuga totam. Perferendis
+          necessitatibus sequi possimus!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+          dignissimos aut voluptas odio? Quidem, maxime reiciendis. Consectetur
+          nesciunt molestias tempora rem iste ullam facilis eligendi non.
+          Maiores vitae mollitia perferendis. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Nulla quod sapiente consequuntur at sint
+          veniam dolorum error repudiandae, alias atque ratione illo unde modi
+          exercitationem expedita placeat? Neque, aliquid voluptatibus. Lorem
+          ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus
+          exercitationem molestiae quae labore accusantium aperiam nobis atque,
+          recusandae magnam, expedita quos animi, laboriosam enim possimus. Fuga
+          distinctio consequatur nisi id?
+        </p>
+      </div>
+    </main>
+  </body>
+</html>

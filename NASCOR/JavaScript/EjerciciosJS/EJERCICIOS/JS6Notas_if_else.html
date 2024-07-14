@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF/ELSE</title>
+</head>
+<body>
+    <input type="number" max="20" min="0" name="" id="nota">
+    <button onclick="calcularLetra()">Calcular Letra</button>
+    <p id="resultado"></p>
+    
+    <script>
+        function calcularLetra () {
+            const nota = Number(document.getElementById("nota").value); //Le diremos que coja el valor del id nota (que lo ponemos en el input)
+            let LetraNota;
+            if ((nota<=20) && (nota>=19)){
+                LetraNota= 'A'                          //Valores de la letra para cada baremo de notas
+            } else if ((nota<=19) && (nota>=16)){
+                LetraNota= 'B'
+            } else if ((nota<16) && (nota>=12)){
+                LetraNota= 'C'
+            } else if ((nota<12) && (nota>=9)){
+                LetraNota= 'D'
+            } else if ((nota<9) && (nota>=0)){
+                LetraNota= 'E'
+            } else {
+                alert ("Introduzca una nota real!")     //Alerta si la nota es negativa o mayor que 20
+            }
+            
+            document.getElementById("resultado").innerHTML = "Tu nota es: " + LetraNota;   //Mostrar la nota calculada con el input!
+        }
+        
+    </script>
+</body>
+</html>

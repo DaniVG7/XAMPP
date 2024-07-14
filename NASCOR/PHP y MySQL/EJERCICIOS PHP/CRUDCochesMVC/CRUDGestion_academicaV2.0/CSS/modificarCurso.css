@@ -1,0 +1,22 @@
+div{
+	width : max-content;
+	margin-right: auto;
+	margin-left: auto;
+}
+input{
+	margin-top:10px;
+	height: 30px;
+	border-radius: 10px;
+}
+select{
+	margin-top:10px;
+	height: 30px;
+	border-radius:10px;
+	width: 170px;
+}
+
+label{
+	color: white;
+	display: inline-block;
+	width:100px;
+}

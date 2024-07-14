@@ -1,0 +1,23 @@
+body{
+	max-width: 1300px;
+	margin: 0 auto;
+	background-color: rgba(114, 186, 94, 0.35);
+}
+main{
+   	margin: 0 auto;
+}
+
+
+.curso{
+	border: 2px dashed white;
+	width: max-content;
+	padding: 10px;
+	margin-bottom: 10px;
+	background-color: lightblue;
+	border-radius: 15px;
+
+}
+.curso button{
+	margin-left: 20px;
+}
+

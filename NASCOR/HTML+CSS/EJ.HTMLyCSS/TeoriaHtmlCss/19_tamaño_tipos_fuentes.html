@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Fuentes</title>
+    <style>
+        section{
+            width: 500px;
+            margin: auto;
+            
+        }
+        .parrafo1{
+            font-family: Arial, Helvetica, sans-serif; /*tipo de letra*/
+            font-size: large; /*tamaño de la letra; también puede ponerse en PX*/
+            font-weight: bold; /*negrita*/
+            font-style:oblique; /*cursiva*/
+            
+        }
+        .parrafo2{
+            font-family: 'Courier New', Courier, monospace;
+            /*font-size: 2em; tamaño em, por defecto 1, aquí pondriamos la letra el doble de grande que el original */
+            font-size: 1.2em; /*Aqui ponemos la letra un 20% más grande que el valor original */
+            text-indent: 30px;
+        }
+
+        .negrita{
+            font-weight: bold;
+        }
+        .parrafo3{
+            font-variant: small-caps; /*para ponerlo en letras mayusculas PERO sin cambiar el tamaño de la minuscula*/
+            text-align: center;
+            line-height: 20px;
+        
+        }
+        .cajita{
+            border: 2px solid black; width: 30px; height: 30px;
+            
+        }
+        .subrayar{
+            text-decoration:underline; /*Subrayar*/
+        }
+        h2{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .transform{
+            text-transform: uppercase;
+        }
+        .sombreado{
+            text-shadow: 3px 3px 3px grey; /*primer valor sombra horizontal, segundo valor vertical, tercero el difuminado y 4o el color.*/
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <p class="parrafo1">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut aliquid cupiditate aperiam ratione similique! Necessitatibus numquam autem nostrum, praesentium architecto quis repellendus quaerat, modi doloremque saepe repellat dignissimos velit soluta?
+            </p>
+            <p class="parrafo2">
+                Lorem, ipsum dolor sit amet <span class="negrita">consectetur adipisicing</span> elit. Velit eligendi placeat expedita tempore eum! Sint assumenda animi velit, dolore sit incidunt reprehenderit minus iure. Nemo voluptatum animi voluptate non eligendi?
+            </p>
+            <P class="parrafo3">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore dolores modi necessitatibus, hic nulla possimus vero alias unde, <span class="subrayar">eos eius quos</span> porro ducimus atque. Quidem vero assumenda temporibus!
+                <div class="cajita"> cajita</div>
+            </P>
+            <h2 class="sombreado">Parrafo 4</h2>
+            <p class="parrafo4">
+                <span class="sombreado">Lorem ipsum dolor sit amet consectetur adipisicing elit</span>. Quam corrupti officia exercitationem minus repellendus quo atque harum? Eos expedita officia laborum eius laudantium distinctio? <span class="transform">Assumenda dolore vel</span> excepturi omnis debitis.               
+            </p>
+            
+        </section>
+    </main>
+    
+</body>
+</html>

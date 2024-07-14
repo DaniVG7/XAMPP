@@ -1,0 +1,38 @@
+button{
+	margin-left: 40px;
+}
+h1{
+	margin-bottom: 20px;
+	color: white;
+	text-align:center;
+}
+main{
+	display: grid;
+	grid-template-columns: auto auto auto auto; 
+}
+.curso{
+	width: 270px;
+	color: white;
+	background-color: rgb(5, 5, 74);
+	padding: 10px;
+	border-radius: 10px;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+
+div button{
+	margin-left: 40px;
+	margin-bottom: 10px;
+}
+
+button{
+	border-radius: 5px;
+	height: 30px;
+	transition: 0.5s;
+}
+button:hover{
+	cursor: pointer;
+	color: blue;
+	background-color: orange;
+}

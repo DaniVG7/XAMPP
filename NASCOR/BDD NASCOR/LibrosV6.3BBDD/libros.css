@@ -1,0 +1,15 @@
+main{
+	margin: auto;
+	width: max-content;
+}
+
+div{
+	background-color : white;
+	width: max-content;
+	padding: 15px;
+	border-radius: 10px;
+}
+
+button{
+	margin-bottom: 10px;
+}

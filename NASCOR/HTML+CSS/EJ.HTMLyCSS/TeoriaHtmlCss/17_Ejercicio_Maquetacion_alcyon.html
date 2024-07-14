@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALCYON</title>
+    <link rel="stylesheet" href="css/17_estilos.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <img src="img/alcyon_logo.jpg">
+            <img src="img/cloud_share.png" class="cloud">
+            <input type="text" placeholder="Google Website Search" class="google">
+            <a href="https://www.google.es" target="_blank"><img
+                    src="https://previews.123rf.com/images/inbj/inbj1601/inbj160100042/54986737-sitio-web-de-google-con-una-lupa-google-es-el-buscador-m%C3%A1s-popular-del-mundo.jpg"
+                    width="50px" height="30px" class="lupa"></a>
+
+        </header>
+        <nav>
+            <button>INICIO</button>|
+            <button>SOBRE ALCYON</button>|
+            <button>FORMACIÓN</button>|
+            <button>PÁGINAS WEB</button>|
+            <button>CLIENTES</button>|
+            <button>DOCUMENTACION</button>|
+            <button>MICROS VINTAGE</button>|
+            <button>CONTACTO</button>
+        </nav>
+        <div>
+            <section class="seccion1">
+
+                <img src="img/Captura de pantalla 2023-07-11 230015.png" alt="slider" class="slider">
+                <br>
+                <h1>AMPLIA EXPERIENCIA FUNCIONAL</h1>
+                <h2>Conocimientos funcionales en las áreas más sensibles del negocio financiero:</h2>
+                <div class="listas">
+                    <ul class="lista-izquierda">
+                        <li>Tesorería</li>
+                        <li>Medios de pago</li>
+                        <li>Personas</li>
+                        <li>Activos y pasivos</li>
+                        <li>Campañas</li>
+                        <li>Riesgo</li>
+                        <li>Gestion de efectos</li>
+                        <li>Comercio exterior </li>
+                        <li>Interfaces entre plataformas</li>
+                    </ul>
+                    <ul class="lista-derecha">
+                        <li>Seguros</li>
+                        <li>Valores y derivados financieros</li>
+                        <li>...</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="seccion2" >
+                <article>
+                    <h4>FORMACIÓN</h4>
+                    <img src="img/formacion.jpg" class="imagenarticulo">
+                    <p>Formacion en HTML5 y CSS3, programación web (JS, Jquery, Angular), entorno servidor (php)...</p>
+
+                </article>
+                <article>
+                    <h4>DESARROLLO WEB</h4>
+                    <img src="img/desarrollo.webp" class="imagenarticulo">
+                    <p>Desarrollos web para mediano y pequeño comercio y centros de estudio, plataformas de venta
+                        on-line y formación para empresas...</p>
+                </article>
+                <article>
+                    <h4>AMPLIA EXPERIENCIA FUNCIONAL</h4>
+                    <img src="img/experiencia.webp" class="imagenarticulo">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat tempora nam sapiente facilis
+                        esse, ex aspernatur excepturi beatae similique et, fuga enim
+                    </p>
+                </article>
+                <article>
+                    <h4>AMPLIA EXPERIENCIA TÉCNICA</h4>
+                    <img src="img/cobol.jpg" class="imagenarticulo">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis maxime aspernatur, minima, esse
+                        sequi commodi ducimus mollitia eligendi fugit, consectetur quos!
+                    </p>
+                </article>
+                <article>
+                    <h4>DISEÑO DE PROCESOS Y APLICACIONES</h4>
+                    <img src="img/interfaz.jpg" class="imagenarticulo">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio consequuntur consequatur ea
+                        molestiae, ducimus hic sequi iure quas perspiciatis doloribus quam eligendi soluta magni.
+                    </p>
+                </article>
+                <article>
+                    <h4>GESTIÓN DE PROYECTOS</h4>
+                    <img src="img/proyectos.png" class="imagenarticulo">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et laborum dolorum consequatur eum,
+                        magni aperiam deserunt odit numquam nemo veritatis dolore suscipit rerum dolorem cumque
+                        molestias voluptates.
+                    </p>
+                </article>
+                <article>
+                    <h4>CMMI</h4>
+                    <img src="img/cmmi-cover-blog.png" class="imagenarticulo">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus porro atque ea veritatis
+                        molestiae beatae, doloribus blanditiis quas!
+                    </p>
+                </article>
+                <article>
+                    <h4>PÁGINAS WEB</h4>
+                    <img src="img/paginasweb.png" class="imagenarticulo">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, id non. Quia aliquam nostrum
+                        minus provident, optio nisi exercitationem dolore eaque fugiat laborum.
+                    </p>
+                </article>
+            </section>
+        </div>
+        <footer>
+            <div class="pie">
+                <img src="img/responsive_small.png" alt="">
+                <img src="img/w3c-wai-validate_small.gif" alt="">
+                <img src="img/w3c-css3-validate_small.jpg" alt="">
+                <img src="img/w3c-html5-validate_small.jpg" alt="">
+            </div>
+            <div id="flecha">
+                <a href="#" id="scroll-top"><img src="https://cdn-icons-png.flaticon.com/512/892/892550.png"
+                        width="20px" class="flecha" title="go   up"></a>
+            </div>
+        </footer>
+
+    </main>
+
+    <script>
+        // Obtiene la referencia al elemento de la flecha
+        var flecha = document.getElementById("scroll-top");
+
+        // Agrega un evento de clic a la flecha
+        flecha.addEventListener("click", function (event) {
+
+            event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+
+            // Desplaza la página hasta el principio 
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth" // Desplazamiento suave
+            });
+        });
+    </script>
+
+</body>
+
+</html>

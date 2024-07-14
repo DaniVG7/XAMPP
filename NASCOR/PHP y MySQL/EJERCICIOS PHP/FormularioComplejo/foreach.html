@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style>
+			form {border: 1px solid red;
+				  padding: 20px;}
+		</style>
+	</head>
+	<body>
+		<form action="foreach.php" method="post">
+		<input type="hidden" name="formulario" value="listado">	
+		Selecciona el curso: 
+		<select name="curso">
+			<option value="PHP">Curso de PHP</option>
+			<option value="Webs">Curso de páginas web</option>
+		</select>
+		<select name="ciudad">
+			<option value="Madrid">Madrid</option>
+			<option value="Barcelona">Barcelona</option>
+		</select>
+		<input type="email" name="correo">
+		<input type="submit" value="Generar HTML" name="boton">	
+		<input type="submit" value="Generar PDF" name="boton">	
+		<input type="submit" value="Generar EXCEL" name="boton">	
+		<input type="submit" value="Enviar por correo" name="boton">
+		</form>	
+		
+		<form action="foreach.php" method="post">
+			<input type="hidden" name="formulario" value="anadir">				
+			Nombre: <input type="text" name="nombre"><br>
+			Apellido: <input type="text" name="apellido"><br>
+			Telefono: <input type="text" name="telefono"><br>
+			Ciudad: 	
+			<select name="ciudad">
+				<option value="Madrid">Madrid</option>
+				<option value="Barcelona">Barcelona</option>
+			</select><br>
+			Curso:
+			<select name="curso">
+				<option value="PHP">Curso de PHP</option>
+				<option value="Webs">Curso de páginas web</option>
+			</select>			
+			<input type="submit" value="Añadir">			
+		</form>
+		
+	</body>
+</html>

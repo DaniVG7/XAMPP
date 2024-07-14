@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays/vectores</title>
+    <script>
+        //var dias_semana = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes",  "Sabado", "Domingo"];
+                          // 0    ,  1      ,     2      ,    3    ,    4     ,     5    ,    6 
+        // Un array es una cadena de strings con valores asignados que van numerados iniciando por el 0.
+       
+        //alert (dias_semana);
+        var coches = ["Audi", "Volvo", "BMW"];
+                   //   0   ,    1   ,    2
+        //document.getElementById("demo1").innerHTML += ' ' + cars;  ---AQUÍ NO !!!! -----
+    </script>
+</head>
+<body>
+    <p id="demo1" class="demo1"> Mis coches favoritos son:</p>
+    <script>
+        document.getElementById("demo1").innerHTML += ' ' + coches; 
+        //Este inner se tiene que codificar al final ya que si lo ponemos en el head no funcionará porque cargará el script antes que el HTML y no detectará el ID demo cuando cargue.
+    </script>
+</body>
+</html>

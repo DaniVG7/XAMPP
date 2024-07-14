@@ -1,0 +1,1 @@
+{"version":1,"defects":{"Test\\MyOwnArrayTest::testArrayContainsTwoElements":3,"Test\\MyOwnArrayTest::testNewArrayIsEmpty":3,"Test\\MyOwnArrayTest::testArrayContainsAnElement":3},"times":{"Test\\MyOwnArrayTest::testNewArrayIsEmpty":0.008,"Test\\MyOwnArrayTest::testArrayContainsAnElement":0,"Test\\MyOwnArrayTest::testArrayContainsTwoElements":0}}

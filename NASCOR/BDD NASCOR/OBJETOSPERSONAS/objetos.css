@@ -1,0 +1,15 @@
+
+div{
+	background-color:white;
+	padding: 20px;
+	width: max-content;
+	margin: auto;
+	border-radius: 15px
+}
+
+input{
+	display: block;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	height: 30px;
+}

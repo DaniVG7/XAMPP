@@ -1,0 +1,152 @@
+	body{
+		background-color:black;
+		color: #f6f6f6;
+	}
+	.cabecera{
+		display: none;
+	}
+
+	h1{text-align:center;margin-top:100px;}
+
+	.contenedor{
+		display: grid;
+		grid-template-columns: auto auto;
+		justify-content:space-around;
+		margin-top: 50px;
+		max-width: 1300px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-bottom: 0;
+	}
+
+	div img{
+		width: 600px;
+		border-radius: 20px;
+	}
+
+
+	input[type="text"] {
+	  height: 40px; 
+	  margin: 10px 0; 
+	  border: 1px solid #ccc; 
+	  border-radius: 5px;
+	  padding: 5px; 
+	  width: 100%;
+	}
+	input[type="password"] {
+	  height: 40px; 
+	  margin: 10px 0; 
+	  border: 1px solid #ccc; 
+	  border-radius: 5px;
+	  padding: 5px; 
+	  width: 100%;
+	}
+
+	input[type="submit"] {
+	  background-color: #007bff; 
+	  color: #fff; 
+	  border: none;
+	  border-radius: 5px;
+	  padding: 10px 20px;
+	  cursor: pointer;
+	}
+	input[type="date"] {
+	  height: 40px; 
+	  margin: 10px 0; 
+	  border: 1px solid #ccc; 
+	  border-radius: 5px;
+	  padding: 5px; 
+	  width: 100%;
+	}
+
+	a {
+	  text-decoration: none;
+	  color: #007bff; 
+	}
+
+	a:hover {
+	  text-decoration: underline; 
+	}
+
+
+	.inicioSesion {
+	  border: 1px solid black;
+	  width: 300px;
+	  border-radius: 10px;
+	}
+	.inicioSesion h2 {
+	  text-align: center;
+	}
+	.logo{
+	position: absolute;
+	top: 40px;
+	left: 70px;
+	}
+	.logo img {
+	 Width: 200px;
+		opacity: 50%;
+	}
+
+	div h3{
+		text-align: center;
+		margin-bottom: 30px;
+	}
+
+	ul{
+		list-style: none;
+	}
+
+    .bookverse {
+ 	  position: relative;
+	}
+
+	.bookverse p {
+	  font-family: Goudy Bookletter 1911, sans-serif;
+	  position: absolute;	
+	  top: 10px;
+	  font-size: 30px;
+	  margin-left: 30px;
+	  margin-top: -30px;
+	  color: white;
+	  z-index: 1;
+	}
+
+	.bookverse p:first-of-type {
+	  top: 400px;
+ 	  left: 0;
+	}
+	.bookverse p:last-of-type {
+  	  top: 365px; /* Ajusta la distancia desde la parte superior según tus necesidades */
+ 	  left: 0;
+	}
+
+	.bookverse img {
+	  margin-top: -150px; 
+	  opacity: 90%;
+	  border-radius: 50px;
+	  max-width: 100%;
+	  z-index:0;
+	}
+
+	.container{
+		width: max-content;
+		margin-left:auto;
+		margin-right:auto;
+		text-align: center
+	}
+
+	.bookverse2 input{
+	 width: 300px;
+   	 font-size: 20px;
+	} 
+	.bookverse2 img{
+		width:500px;
+	}
+
+	footer{
+		display: none
+	}
+	
+.formulario{
+	width: 342px;
+}

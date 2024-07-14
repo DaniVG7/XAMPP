@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Posicionamiento</title>
+    <style>
+        main {
+            width: 60%;
+            margin: auto
+        }
+
+        section {
+            padding: 20px;
+            background-color: aquamarine;
+            height: 500px;
+        }
+
+        div {
+            padding: 10px;
+            border: 2px solid green;
+            background-color: beige;
+            width: 200px;
+            height: 200px;
+        }
+        .fixed{
+            position: fixed;
+            top: 10px; /*coordenada desde el borde superior del navegador */
+            left: 10px; /*coordenada desde el margen izquierdo del navegador */                    
+        }
+        .sticky{
+            position: sticky;
+            top: 30px;
+        }
+        nav{
+            position: sticky;
+            height: 40px;
+            background-color: blue;
+            top: 0px;
+            z-index: 99; /*nivel de profundidad, para asegurar que cualquier nivel pasa por debajo*/
+        }
+        .relative{
+            position: relative;
+            top: 60px;  /*coordenada respecto a la posición original de la propia caja */
+            left: 50px; 
+        }
+        .absolute{
+            position: absolute; /*posicionamiento tomando como referencia la primera caja que no tenga posicionamiento estatico*/
+            top: 10px;
+            right: 10px;
+       
+        }
+        #relative{
+            position: relative; /*posicionamiento distinto al estatico para que se utilice como referencia en el posicionamiento absoluto */
+        }        
+    </style>
+</head>
+
+<body>
+    <main>
+        <nav></nav>
+        <section>
+            <h2>Posicionamiento STATIC</h2>
+            <div>
+                <p>STATIC</p>
+            </div>
+        </section>
+        <hr>
+        <section>
+            <h2>Posicionamiento FIXED</h2>
+            <div class="fixed">
+                <p>fixed</p>
+            </div>
+        </section>
+        <hr>
+        <section>
+            <h2>Posicionamiento STICKY</h2>
+            <div class="sticky">
+                <p>sticky</p>
+            </div>
+        </section>
+        <hr>
+        <section>
+            <h2>Posicionamiento RELATIVO</h2>
+            <div class="relative">
+                <p>Relative</p>
+            </div>
+        </section>
+        <hr>
+        <section id="relative">
+            <h2>Posicionamiento ABSOLUTO</h2>
+            <div class="absolute">
+                <p>Absolute</p>
+            </div>
+        </section>
+        <hr>
+    </main>
+</body>
+
+</html>

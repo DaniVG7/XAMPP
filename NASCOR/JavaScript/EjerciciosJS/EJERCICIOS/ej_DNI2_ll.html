@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación DNI</title>
+    <style>
+        #resultadodni{
+            border: 2px solid green;
+            background-color: wheat;
+            max-width: max-content;
+            font-size: xx-large;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="resultadodni"></div>
+
+    <script>
+        var arrayletra = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+        //declaramos un array con las letras en orden para el DNI.
+        var numDni, resultadoLetra, letra; //declaramos las variables
+        numDni = Number(prompt('Ponga su DNI sin letra')); //a esta variable le ponemos un number promt para que el usuario introduzca el numero de DNI
+        letra = prompt('Ponga la letra de su DNI'); // lo mismo pero con la letra del DNI
+
+        if (numDni > 99999999 || numDni  < 0 ) {        // aquí le decimos que si el numero es mayor que 99.999.999 o menor que 0 saque la alert.
+            alert('Introduce un número de DNI correcto');   //Alerta al darse el anterior if
+        } else {                                        // Si el número no es erroneo osea, es correcto, haremos el calculo y...
+            resultadoLetra = arrayletra[numDni % 23];   // La variable resultadoLetra sera igual al valor de arrayletra haciendo el calculo de numDni (numero que introduce el usuario) módulo (%) 23 para calcular la letra correcta.
+
+            if (letra.toUpperCase() === resultadoLetra) {  //entonces, si variable letra es estrictamente igual a resultadoLetra (coinciden)
+            alert('El DNI y la letra son correctos');      //sacamos una alerta conforme DNI y Letra son correctos
+            } else {
+            alert('La letra del DNI es incorrecta');       //En caso contrario, la letra del DNI es inccorrecta
+            }
+        }
+        document.getElementById("resultadodni").innerHTML = 'DNI Correcto: ' + numDni + '-' + resultadoLetra + "✅"
+        //Esto es para mostrar en el documento en la caja con id resultadodni el siguiente texto: Dni Correcto: + la variable numDni que introduce el usuario en el prompt + la variable resultadoLetra que se calcula cogiendo del arrayletra el calculo del numero introducido por el usuario % 23 
+    </script>
+</body>
+</html>

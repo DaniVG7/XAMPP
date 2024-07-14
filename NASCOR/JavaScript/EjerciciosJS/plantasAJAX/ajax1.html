@@ -1,0 +1,25 @@
+<html>
+<meta charset="utf-8" lang="es">
+<head>
+	<style>
+		*{padding: 10px;}
+		body{max-width: 900px; margin: auto;}
+		h1{border: 2px solid orange; background-color: rgb(136, 210, 210); width: max-content; border-radius: 10px; margin: auto;}
+		input{text-align: center; margin-top: 20px	;}
+		.FormatoPlanta{background-color: lightblue; border: 2px solid blue;height: 280px; margin-bottom: 10px; border-radius: 20px; box-shadow: 5px 5px 5px black;}
+		.input{text-align: center;}
+		@media (min-width: 800px){
+			#DIV_plantas{ display: grid; grid-template-columns: 25% 25% 25% 25%}
+			.FormatoPlanta{margin-right: 10px; height: 410px;}
+		}
+	</style>
+</head>
+<body>
+	<h1>Lista de plantas</h1>
+	<div id="DIV_plantas">
+		
+	</div>
+	<div class="input"><input type="button" value="Recuperar Plantas" id="leerPlantas" onclick="leerPlantas()"></div>
+	<script src="ajax1.js"></script>
+</body>
+</html>

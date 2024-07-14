@@ -1,0 +1,348 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang3082{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.22621}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang10 <!DOCTYPE html>\par
+<html lang="es">\par
+\par
+<head>\par
+    <meta charset="UTF-8">\par
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+    <title>ALCYON</title>\par
+    <style>\par
+        body \{\par
+            font-family: Arial, Helvetica, sans-serif;\par
+            background-color: lightcyan;\par
+            \par
+        \}\par
+\par
+        main \{\par
+            position: relative;\par
+            max-width: 1250px;\par
+            margin: auto;\par
+            width: 1050px;\par
+            \par
+\par
+        \}\par
+\par
+        header \{\par
+            border: 1px solid blue;\par
+            margin-bottom: 5px;\par
+            background-color: white;\par
+            box-shadow: 2px 2px 2px black;\par
+        \}\par
+\par
+\par
+        .google \{\par
+            position: absolute;\par
+            right: 60px;\par
+            top: 15px;\par
+        \}\par
+\par
+        .cloud \{\par
+            position: absolute;\par
+            right: 20px;\par
+            top: 50px;\par
+        \}\par
+\par
+        .lupa \{\par
+            position: absolute;\par
+            right: 10px;\par
+            top: 10px;\par
+            margin: 0px;\par
+\par
+        \}\par
+\par
+        nav \{\par
+            height: 40px;\par
+            background-color: lightblue;\par
+            border: 1px solid lightseagreen;\par
+            margin-bottom: 5px;\par
+            text-align: center;\par
+            display: flex;\par
+            align-items: center;\par
+            box-shadow: 2px 2px 2px black;\par
+\par
+\par
+        \}\par
+\par
+        nav button \{\par
+            margin: auto;\par
+            border: none;\par
+            background-color: lightblue;\par
+            height: 100%;\par
+            color: teal;\par
+            font-weight: bold;\par
+\par
+\par
+        \}\par
+\par
+        nav button:hover \{\par
+            background-color: yellow;\par
+            cursor: pointer;\par
+        \}\par
+\par
+        div \{\par
+            border: 2px solid grey;\par
+            margin-bottom: 10px;\par
+            background-color: white;\par
+            box-shadow: 2px 2px 2px black;\par
+            padding-top: 0;\par
+\par
+        \}\par
+\par
+\par
+\par
+        .slider \{\par
+            float: left;\par
+            width: 50%;\par
+            height: 400px;\par
+            margin-right: 10px;\par
+\par
+        \}\par
+\par
+        h1 \{\par
+            color: blueviolet;\par
+            margin-top: 0;\par
+        \}\par
+\par
+        h2 \{\par
+            color: blueviolet;\par
+        \}\par
+\par
+        h4 \{\par
+            color: blue;\par
+            margin-bottom: 5px;\par
+        \}\par
+\par
+        .listas \{\par
+            display: flex;\par
+            border: none;\par
+            font-weight: bold;\par
+            box-shadow: none\par
+        \}\par
+\par
+        .lista-izquierda \{\par
+            width: 50%;\par
+            list-style: none;\par
+            color: purple;\par
+            padding: 0;\par
+        \}\par
+\par
+        .lista-derecha \{\par
+            float: left;\par
+            width: 50%;\par
+            list-style: none;\par
+            color: purple;\par
+        \}\par
+\par
+        section \{\par
+            margin-bottom: 10px;\par
+        \}\par
+\par
+        #seccion2 \{\par
+            display: flex;\par
+            flex-wrap: wrap;\par
+            justify-content: space-around;\par
+            padding: 30px;\par
+            margin-top: 100px;\par
+        \}\par
+\par
+        article \{\par
+            border: 2px solid green;\par
+            width: 47%;\par
+            text-align: center;\par
+            margin-bottom: 10px;\par
+            padding: 5px;\par
+            box-shadow: 3px 3px 3px teal\par
+        \}\par
+\par
+        article:hover \{\par
+            background-color: rgb(47, 255, 210);\par
+            cursor: pointer;\par
+        \}\par
+\par
+        \par
+        /*en este caso se podria haber usado el atributo class con distintos nombres en todas las fotos, pero se hace con uno mismo porque se puede repetir y solo definiriamos este atributo class */\par
+        .imagenarticulo \{\par
+            float: left;\par
+            width: 40%;\par
+            padding-bottom: 20px;\par
+            height: 135px;\par
+            margin-right: 10px;\par
+        \}\par
+\par
+        p \{\par
+            text-align: justify;\par
+        \}\par
+\par
+        footer \{\par
+            background-color: lemonchiffon;\par
+            height: 150px;\par
+            margin-bottom: 10px;\par
+            border: 2px solid goldenrod;\par
+            position: relative;\par
+            box-shadow: 2px 2px 2px black;\par
+        \}\par
+\par
+        .pie \{\par
+            background-color: lemonchiffon;\par
+            border: none;\par
+            position: absolute;\par
+            bottom: 1px;\par
+            right: 10px;\par
+            box-shadow: none;\par
+        \}\par
+\par
+        #flecha \{\par
+            border: none;\par
+        \}\par
+\par
+        .flecha \{\par
+            position: absolute;\par
+            top: 10px;\par
+            right: 10px;\par
+        \}\par
+    </style>\par
+</head>\par
+\par
+<body>\par
+    <main>\par
+        <header>\par
+            <img src="img/alcyon_logo.jpg">\par
+            <img src="img/cloud_share.png" class="cloud">\par
+            <input type="text" placeholder="Google Website Search" class="google">\par
+            <a href="https://www.google.es" target="_blank"><img\par
+                    src="https://previews.123rf.com/images/inbj/inbj1601/inbj160100042/54986737-sitio-web-de-google-con-una-lupa-google-es-el-buscador-m%C3%A1s-popular-del-mundo.jpg"\par
+                    width="50px" height="30px" class="lupa"></a>\par
+\par
+        </header>\par
+        <nav>\par
+            <button>INICIO</button>|\par
+            <button>SOBRE ALCYON</button>|\par
+            <button>FORMACI\'d3N</button>|\par
+            <button>P\'c1GINAS WEB</button>|\par
+            <button>CLIENTES</button>|\par
+            <button>DOCUMENTACION</button>|\par
+            <button>MICROS VINTAGE</button>|\par
+            <button>CONTACTO</button>\par
+        </nav>\par
+        <div>\par
+            <section class="seccion1">\par
+\par
+                <img src="img/Captura de pantalla 2023-07-11 230015.png" alt="slider" class="slider">\par
+                <br>\par
+                <h1>AMPLIA EXPERIENCIA FUNCIONAL</h1>\par
+                <h2>Conocimientos funcionales en las \'e1reas m\'e1s sensibles del negocio financiero:</h2>\par
+                <div class="listas">\par
+                    <ul class="lista-izquierda">\par
+                        <li>Tesorer\'eda</li>\par
+                        <li>Medios de pago</li>\par
+                        <li>Personas</li>\par
+                        <li>Activos y pasivos</li>\par
+                        <li>Campa\'f1as</li>\par
+                        <li>Riesgo</li>\par
+                        <li>Gestion de efectos</li>\par
+                        <li>Comercio exterior </li>\par
+                        <li>Interfaces entre plataformas</li>\par
+                    </ul>\par
+                    <ul class="lista-derecha">\par
+                        <li>Seguros</li>\par
+                        <li>Valores y derivados financieros</li>\par
+                        <li>...</li>\par
+                    </ul>\par
+                </div>\par
+            </section>\par
+            <section id="seccion2">\par
+                <article>\par
+                    <h4>FORMACI\'d3N</h4>\par
+                    <img src="img/formacion.jpg" class="imagenarticulo">\par
+                    <p>Formacion en HTML5 y CSS3, programaci\'f3n web (JS, Jquery, Angular), entorno servidor (php)...</p>\par
+\par
+                </article>\par
+                <article>\par
+                    <h4>DESARROLLO WEB</h4>\par
+                    <img src="img/desarrollo.webp" class="imagenarticulo">\par
+                    <p>Desarrollos web para mediano y peque\'f1o comercio y centros de estudio, plataformas de venta\par
+                        on-line y formaci\'f3n para empresas...</p>\par
+                </article>\par
+                <article>\par
+                    <h4>AMPLIA EXPERIENCIA FUNCIONAL</h4>\par
+                    <img src="img/experiencia.webp" class="imagenarticulo">\par
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat tempora nam sapiente facilis\par
+                        esse, ex aspernatur excepturi beatae similique et, fuga enim\par
+                    </p>\par
+                </article>\par
+                <article>\par
+                    <h4>AMPLIA EXPERIENCIA T\'c9CNICA</h4>\par
+                    <img src="img/cobol.jpg" class="imagenarticulo">\par
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis maxime aspernatur, minima, esse\par
+                        sequi commodi ducimus mollitia eligendi fugit, consectetur quos!\par
+                    </p>\par
+                </article>\par
+                <article>\par
+                    <h4>DISE\'d1O DE PROCESOS Y APLICACIONES</h4>\par
+                    <img src="img/interfaz.jpg" class="imagenarticulo">\par
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio consequuntur consequatur ea\par
+                        molestiae, ducimus hic sequi iure quas perspiciatis doloribus quam eligendi soluta magni.\par
+                    </p>\par
+                </article>\par
+                <article>\par
+                    <h4>GESTI\'d3N DE PROYECTOS</h4>\par
+                    <img src="img/proyectos.png" class="imagenarticulo">\par
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et laborum dolorum consequatur eum,\par
+                        magni aperiam deserunt odit numquam nemo veritatis dolore suscipit rerum dolorem cumque\par
+                        molestias voluptates.\par
+                    </p>\par
+                </article>\par
+                <article>\par
+                    <h4>CMMI</h4>\par
+                    <img src="img/cmmi-cover-blog.png" class="imagenarticulo">\par
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus porro atque ea veritatis\par
+                        molestiae beatae, doloribus blanditiis quas!\par
+                    </p>\par
+                </article>\par
+                <article>\par
+                    <h4>P\'c1GINAS WEB</h4>\par
+                    <img src="img/paginasweb.png" class="imagenarticulo">\par
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, id non. Quia aliquam nostrum\par
+                        minus provident, optio nisi exercitationem dolore eaque fugiat laborum.\par
+                    </p>\par
+                </article>\par
+            </section>\par
+        </div>\par
+        <footer>\par
+            <div class="pie">\par
+                <img src="img/responsive_small.png" alt="">\par
+                <img src="img/w3c-wai-validate_small.gif" alt="">\par
+                <img src="img/w3c-css3-validate_small.jpg" alt="">\par
+                <img src="img/w3c-html5-validate_small.jpg" alt="">\par
+            </div>\par
+            <div id="flecha">\par
+                <a href="#" id="scroll-top"><img src="https://cdn-icons-png.flaticon.com/512/892/892550.png"\par
+                        width="20px" class="flecha" title="go   up"></a>\par
+            </div>\par
+        </footer>\par
+\par
+    </main>\par
+\par
+    <script>\par
+        // Obtiene la referencia al elemento de la flecha\par
+        var flecha = document.getElementById("scroll-top");\par
+\par
+        // Agrega un evento de clic a la flecha\par
+        flecha.addEventListener("click", function (event) \{\par
+\par
+            event.preventDefault(); // Evita el comportamiento predeterminado del enlace\par
+\par
+            // Desplaza la p\'e1gina hasta el principio\par
+            window.scrollTo(\{\par
+                top: 0,\par
+                behavior: "smooth" // Desplazamiento suave\par
+            \});\par
+        \});\par
+    </script>\par
+\par
+</body>\par
+\par
+</html>\par
+}
+ 

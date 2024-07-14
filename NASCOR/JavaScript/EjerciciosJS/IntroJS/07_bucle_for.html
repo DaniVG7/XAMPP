@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucle/for</title>
+</head>
+
+
+<body>
+    <h2>Bucle JS</h2>
+    <p id="mensaje"></p>
+    <script>
+        /*var mensaje= "hola estoy dentro del bucle"
+        i= 0
+        for(var i=0; i<5; i++){  // la i empieza en 0 y mientras sea menor que 5 se mostrará nuestro mensaje. Cada vez que acaba el bucle la  i incrementa en 1 (i++ = i+1)
+            alert(mensaje);
+        } //cuando se acaba el bucle y se supera el valor de i se pasa a la linea de abajo:
+        for( ){
+    
+        } */
+        
+        var dias = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sábado", "Domingo" ];  //Array con dias de la semana.
+        /*for(var i=0; i<dias.length; i++){        //dias.length = 7 ; .length es la cantidad de elementos en el array que hay 7.
+            alert(dias[i]);                     // Mostrará en un alert los dias en pantalla sumandose de uno en uno.
+        }*/
+        var text = '';
+        for (i=0; i<dias.length; i++){
+            text += dias[i] + '<br>';
+        }
+        document.getElementById("mensaje").innerHTML = text
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video fondo</title>
+    <style>
+        
+        body{
+            overflow: hidden;
+        }
+        *{
+            box-sizing: border-box;
+            margin: 0; /*suprme todos los margenes de las etiquetas que tienen margenes por defecto*/
+        }
+        video{
+            width: 100%; /*ancho del 100% de la caja contenedora*/
+            height: 100vh;  /* 100% de alto del navegador */ 
+            
+        }
+        article{
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 255, 0.3); /*fondo de color semitransparente "0.3"*/
+            position: absolute; /*posicionar la caja en la esquina superior izq del navgador por encima del video*/
+            padding: 50px; /*margen interior de la caja */
+            display: flex;
+            justify-content: center;/*centra la imagen horizontalmente*/
+            align-items: center; /*centra la imagen verticalmente*/
+        }
+        article img{
+            width: 250px;
+            height: 150px;
+            opacity: 0.6; /*semitransparencia del 60% en la imagen*/
+        }
+        
+    </style>
+</head>
+<body>
+    <section>
+        <article>
+            <img src="imagenes/kings-league_logo-summa-1024x577.png" alt="">
+        </article>
+        <video src="media/Universal_100th_Anniversary.mp4" controls autoplay muted loop></video>
+    </section>
+    
+    
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filtrar Array de objetos</title>
+    <style>
+      body {
+        background-color: rgb(124, 206, 43);
+        font-weight: bold;
+      }
+
+      #datos {
+        margin: auto;  /*centrar caja en el navegador horizontalmente*/
+        max-width: max-content;
+        width: 600px;
+        background-color: blueviolet;
+        padding: 20px;
+        border-radius: 20px;
+        border: 2px solid black;
+        box-shadow: 30px 30px 30px 0;
+      }
+      label {
+        display: inline-block; /*alinear los inputs */
+        width: 50%;
+      }
+      input {
+        width: 110px;
+      }
+      #rei33{
+        width: 100;  /*100% de anchura dentro de su caja */
+        background-color: '';
+        text-align: center; /*centrado boton*/
+        
+      }
+      #Reiniciar{
+        width: 120px; /*anchura boton*/
+      }
+    </style>
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+    <main>
+      <form id="datos">
+        <label for="">Nombre: </label
+        ><input type="text" id="nombre" /><br /><br />
+        <label for="">Primer apellido: </label
+        ><input type="text" id="apellido1" /><br /><br />
+        <label for="">Segundo apellido: </label
+        ><input type="text" id="apellido2" /><br /><br />
+        <label> Sexo: </label><select name="" id="sexo">
+            <option value="" selected disabled>Seleccionar sexo</option>
+            <option value="Hombre">Hombre</option>
+            <option value="Mujer">Mujer</option>
+            <option value="Otro">Otro</option>
+        </select>
+        <div id="nosex"></div> <br><br>
+        
+        
+        <input type="button" value="Añadir persona" onclick="añadirPersona()" />
+        <input type="button" value="Listar hombres" onclick="listarFiltro('Hombre')"/>
+        <input type="button" value="Listar Mujeres"onclick="listarFiltro('Mujer')"/> <br><br><br>
+        <div id="rei33"><input type="reset" value="Reiniciar campos" id="Reiniciar"><div></div>
+        
+      </form>
+      <br /><br /><br />
+
+      <div id="resultado"></div>
+    </main>
+    <script src="objetos3filter.js"></script>
+  </body>
+</html>

@@ -1,0 +1,446 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin:0 auto;
+}
+
+header {
+    /*background-color: #f2f2f2;*/
+    padding: 20px;
+    text-align: center;
+}
+
+.logoheader img {
+    width: max-content; /* Ajusta el ancho según tus necesidades */
+    height: auto;
+    max-width: 400px;
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+section.navigation-bar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.navigation-bar div{
+    margin: 10px;
+}
+.navigation-bar{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+}
+.navigation-bar .nav-item {
+    margin: 0 20px;
+    color: #fff;
+    text-decoration: none;
+    width: 200px;
+    vertical-align: top;
+}
+
+svg{
+    fill: #8e43f0;
+    width: 30px;
+}
+
+main {
+    padding: 20px;
+}
+
+.featured-products {
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+div .product{
+    background-color: #d9ffd4;
+    border-radius: 10px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+}
+
+.product img{
+    width: 200px;
+}
+
+
+/* Membresía vip */
+
+.vip{
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.vip-membership, .monthly-shipping {
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+.vip-membership{
+    font-size: 25px;
+}
+.monthly-shipping{
+    font-size: 30px;
+    text-align: left;
+}
+
+.purple-button {
+    background-color: #8e43f0;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Valoraciones*/
+
+.customer-reviews {
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.review-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.review {
+    background-color: #f2f2f2;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 40%; /* Ajusta según sea necesario */
+}
+
+.review img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.rating {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.customer-name {
+    font-style: italic;
+    color: #555;
+}
+
+/*Productos sostenibles */ 
+
+.sustainable-section {
+    background: url('imgs/desarrollosost.png');
+    background-color: rgb(195, 251, 182);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    height: 500px;
+    display: grid;
+    place-items: center;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.sustainable-section h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    width: 50%;
+    margin: auto;
+}
+
+.sustainable-section p {
+    font-size: 25px;
+    line-height: 1.5;
+    width: 70%;
+    font-weight: bold;
+}
+
+.sustainable-section .purple-button {
+    background-color: 8e43f0;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/*Merchan*/
+
+.merchandising-section {
+    background: url('imgs/merchan.png');   
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 1000px;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(195, 251, 182);
+}
+
+.merchandising-section h2 {
+    margin-top: 150px;
+    font-size: 40px;
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+.merchandising-section p {
+    font-size: 25px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    width: 70%;
+}
+
+.merchandising-section .purple-button {
+    background-color: 8e43f0;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/*Contacto*/
+
+.contact-section {
+    background-color: #f2f2f2;
+    padding: 80px 20px;
+    text-align: center;
+    margin-top: 20px;
+    
+}
+.contact-section svg{
+    fill: #8e43f0 ;
+}
+
+.contact-section h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.contact-form .purple-button {
+    background-color: 8e43f0;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/*Footer*/ 
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    max-width: 1200px;
+    position: relative;
+    height: 190px;
+    display: grid;
+    place-items: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+footer ul li {
+    font-size: 40px;
+    font-weight: bold;
+    color: #8fbf88;
+}
+
+#back-to-top {
+    cursor: pointer;
+}
+
+#back-to-top img {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    right: 20px;
+    top: 40%;
+}
+.logo{
+    width: 200px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+
+/* Estilos para tabletas y teléfonos móviles */
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    .logo img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    nav ul {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    nav li {
+        display: block;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    section.navigation-bar {
+        padding: 10px;
+    }
+
+    .navigation-bar {
+        display: block;
+        text-align: center;
+    }
+
+    .navigation-bar .nav-item {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    div .product {
+        padding: 20px;
+    }
+    .monthly-shipping{
+        margin-left: 20px;
+    }
+    .review-container {
+        justify-content: center;
+    }
+
+    .review {
+        max-width: 100%;
+    }
+
+    .sustainable-section h2,
+    .sustainable-section p {
+        width: 100%;
+    }
+
+    .merchandising-section h2,
+    .merchandising-section p {
+        width: 100%;
+    }
+
+    .contact-section p,
+    .contact-section h2 {
+        width: 100%;
+    }
+
+    .social-icons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+    }
+
+    footer ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #back-to-top img {
+        right: 10px;
+        top: -5px;
+    }
+    .logo{
+        visibility: hidden;
+    }
+}

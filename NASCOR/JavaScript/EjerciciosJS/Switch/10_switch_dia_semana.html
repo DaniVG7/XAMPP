@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript switch</h2>
+
+<p id="demo"></p>
+
+<script>
+let day;
+switch (new Date().getDay()) {
+  case 0:
+    day = "Domingo";     // Domingo es el primer dia ya que en muchos paises de habla inglesa la semana empieza el Domingo, es un tema geopolitico, no informático.
+    break;
+  case 1:
+    day = "Lunes";
+    break;
+  case 2:
+    day = "Martes";
+    break;
+  case 3:
+    day = "Miercoles";
+    break;
+  case 4:
+    day = "Jueves";
+    break;
+  case 5:
+    day = "Viernes";
+    break;
+  case  6:
+    day = "Sábado";
+}
+document.getElementById("demo").innerHTML = "Hoy es " + day;
+</script>
+
+</body>
+</html>

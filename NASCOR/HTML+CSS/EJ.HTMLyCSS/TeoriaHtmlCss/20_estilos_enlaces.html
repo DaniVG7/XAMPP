@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENLACES</title>
+    <style>
+        nav{
+            border: 2px solid black;
+            padding: 10px;
+            margin: auto;
+            width: 500px;
+            /*text-align: center; Esto no es necesario con display flex*/
+            display: flex;
+            justify-content: space-around; /*alineacion de los enlaces */
+        }    
+        nav a{
+            text-decoration: none; /*eliminar el subrayado*/
+            border: 1px solid black;
+            color: blueviolet;  /*tipo de cursor del ratón */
+            padding: 5px;
+            transition: 1s; /*transicion en segundos para aplicar las propiedades del hover*/
+                                  
+        }
+        nav a:hover{
+            background-color: aqua;  /*color de fondo cuando el cursor entre al enlace*/
+            color: violet; /* color de letra cuando el cursor entra al enlace */
+            cursor: pointer;
+            box-shadow: 2px 2px 2px blue;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <nav>
+        <a href="#">ENLACE 1</a>
+        <a href="#">ENLACE 2</a>
+        <a href="#">ENLACE 3</a>
+        <a href="#">ENLACE 4</a>
+    </nav>
+    
+</body>
+</html>

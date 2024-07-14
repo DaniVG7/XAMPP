@@ -1,0 +1,44 @@
+body{
+	margin: 0 auto;
+	background-color: rgba(114, 186, 94, 0.35);
+
+}
+
+main{
+	width: max-content;
+	margin: 0 auto;
+}
+.cabecera{
+	width: max-content;
+	margin: 0 auto;
+}
+.formcurso{
+	width: max-content;
+	padding: 10px;
+	margin-bottom: 10px;
+	background-color: lightblue;
+	border-radius: 15px;
+	border: 2px dashed white;
+}
+
+label{
+	display: inline-block;
+	width: 170px;
+}
+input{
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+select{
+	border-radius: 5px;
+	margin-bottom: 10px;
+	height: 20px;
+}
+.footer{
+	width: max-content;
+	margin: 0 auto;
+}
+h2{
+	text-align:center;
+	color:red;
+}

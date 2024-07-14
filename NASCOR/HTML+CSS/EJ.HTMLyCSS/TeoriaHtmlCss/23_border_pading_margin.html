@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bordes y margenes</title>
+    <style>
+        *{
+            box-sizing: border-box; /*Para indicar al navegador que no incremente el ancho y alto de las cajas a las que asignemos padding o border y mantenga los tamaños que queremos */
+        }
+        section {
+            width: 500px;
+            margin:auto;
+            border: 5px ridge cyan;
+            background-color: antiquewhite;
+            display: flex;
+            flex-wrap: wrap; /*contenedor multilinea, se pondran cajas junto a otras aunque tenga que quitarles ancho*/
+        }
+        article {
+            /*width:calc(50% - 24px); HAY QUE DEJAR ESPACIOS EN BLANCO ALREDEDOR DEL SIMBOLO - */
+            width: 50%;
+            height: 250px;
+            border: 2px solid blue; /*al ocupar cada articulo el 50% + el pixel de borde, no entran en fila en la caja, los bordes incrementan siempre el ancho y alto de las cajas*/
+            /*padding: 10px; los padding incrementan SIEMPRE el alto y ancho de las cajas*/
+            cursor: wait; /*tipo de cursor en espera como cuando algo carga*/
+        }
+        #articulo1 {
+            background-color: orange;
+            overflow: hidden; /*evita que el contenido desborde la caja  articulo1 y lo introduce dentro recortando cuando ya no quepa mas */
+            padding: 10px 10px 10px 10px; /*padding: arriba izq abajo der*/
+            
+        }
+        #articulo2 {
+            background-color: green;
+        }
+        aside{
+            background-color: gold;            
+            width: 250px;
+            height: 250px;
+            margin: auto;
+            border-radius: 50%; /*para que quede un circulo es IMPRESCINDIBLE que la caja tenga el mismo alto que ancho*/
+            overflow: hidden; /*cultar el contenido que desborde la caja contenedora*/ 
+        }
+        aside img{
+            width: 100%;
+            height: 100%;
+        
+        }
+       
+            
+    </style>
+</head>
+<body>
+    <section>
+        <article id="articulo1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, beatae, facilis incidunt vel maxime similique quidem exercitationem aliquam mollitia veritatis fugiat aut? Laborum labore dignissimos recusandae suscipit est reprehenderit error.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, numquam obcaecati ea iusto quam ut facilis labore est vitae! Enim labore, omnis consectetur quasi ut fugiat facilis nemo est at. </p>
+        </article>
+        <article id="articulo2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio beatae praesentium nihil dolores doloribus ut, ex at quaerat officia hic voluptatem autem maxime, explicabo consectetur nisi magni facilis eveniet voluptatibus?</p>
+        </article>
+    </section>
+    <hr>
+    <aside>
+        <img src="imagenes/kings-league_logo-summa-1024x577.png">
+    </aside>
+    

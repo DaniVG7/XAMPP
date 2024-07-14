@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valores input</title>
+</head>
+<body>
+    Número 1: <input type="number" name="" id="num1"> </br>
+    Número 2: <input type="number" id="num2"> <br><br>
+    <button onclick="comparar()">Comparar</button> 
+    <div id="resultado"></div>
+    
+    <script>
+        function comparar(){
+            num1 = Number(document.getElementById('num1').value);  //Cogemos el valor de lo que el usuario puso en el input num1
+            num2 = Number(document.getElementById('num2').value);  //Cogemos  el valor del input num2
+            if (num1>num2){
+                resultado = 'El número mayor es ' + num1;  // decimos que si el num1 es mayor que el num2, muestre el num1
+            }
+            else if (num1===num2){
+                resultado= 'Ambos números son iguales';  // si ambos num son iguales mostrará este texto
+            }
+            else{
+                resultado= 'El número mayor es ' + num2; // sino (será mayor el num2), que muestre el num2
+            }
+            document.getElementById('resultado').innerHTML = resultado;    //Aquí le decimos que muestre la variable resultado en el id resultado
+            document.getElementById('resultado').innerHTML += '<br> La suma es:' + (num1+num2);  // Aquí que a continuacion muestre la suma de ambos numeros
+        }
+        
+    </script>
+</body>
+</html>

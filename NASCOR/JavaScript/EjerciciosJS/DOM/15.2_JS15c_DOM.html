@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS15-c DOM Lista con borrado de nodos</title>
+    <style>
+      ol {
+        border: 1px solid black;
+        max-width: max-content;
+        padding: 20px;
+        background-color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Lista de bebidas:</p>
+    <ol id="listaBebidas">
+      <li>Café</li>
+      <li>Té</li>
+      <li>Coca-Cola</li>
+      <li>Fanta</li>
+      <li>Colacao</li>
+      <li>Chocolate</li>
+      <li>Nestea</li>
+      <li>Cafe descafeinado</li>
+    </ol>
+
+    Otra bebida <input type="text" id="nuevaBebida" />
+    <input type="button" value="Añadir" onclick="bebidaAlternativa()" />
+    <br>
+    Elija una bebida para borrar <input type="number" id="bebidaAEliminar">
+    <input type="button" value="Eliminar bebida" onclick="eliminarBebida()">
+
+    <br /><br /><br />
+    Introduzca el número de la bebida que desea
+    <input type="number" id="bebidaEscogida" />
+
+    <input type="button" onclick="escogerBebida()" value="Escoger bebida" />
+
+    <div id="bebidaSaliente"></div>
+    <script>
+
+// SELECCIONAMOS UN ELEMENTO DE UNA LISTA PREDEFINIDA ***************************************************************
+
+      function escogerBebida() {
+        //Cogeremos el valor introducido por el usuario como 'su bebida a escoger'.
+        var bebida = Number(document.getElementById("bebidaEscogida").value);
+        //Cogemos nuestra propia lista hecha por nosotros primeramente.
+        var x = document.getElementsByTagName("LI");
+        //Añadimos condicionales para que si el numero que introduce el usuario es erróneo le salte un error.
+        if (isNaN(bebida) || bebida < 1 || bebida > listaBebidas.children.length) {
+          texto =
+            "<span style=color:red> INTRODUZCA UN NÚMERO DE LA LISTA DE BEBIDAS!</span>";
+        } else {
+        //En caso de que sea correcto le pondremos el texto siguiente añadiendole el valor que él escogió restandole 1 para que coincida con el índice en nuestro array
+          texto =" Gracias por contar con nosotros, disfrute de su " + x[bebida - 1].innerHTML;
+        }
+        document.getElementById("bebidaSaliente").innerHTML = texto;
+      }
+
+// AÑADIMOS ELEMENTOS A UNA LISTA YA PREDEFINIDA *******************************************************************      
+
+      function bebidaAlternativa() {
+        var letras = /^[a-zA-Z]+$/; //creamos la variable letras para que todo sean letras y no pueda introducir caracteres especiales.
+        //A continuación cogeremos el valor que el usuario haya escrito como la nueva bebida que desea.
+        var bebidaNueva = document.getElementById("nuevaBebida").value; 
+        //Añadiremos los condicionales para que el usuario esté 'obligadoa introducir un nombre real de una bebida comparandolo con nuestra variable letra y en caso de que no sean LETRAS de la aA a la zZ, le salga una alerta.
+        if (!letras.test(bebidaNueva)) {
+          alert("Introduzca el nombre de una bebida!");
+        } else {
+        //En caso de que haya introducido correctamente la bebida procederemos a alertarle esta vez con que ha sido introducida bien.
+          alert("Bebida añadida correctamente✅");
+          //Recuperaremos la lista ya existente que teniamos en primer lugar !!!!!!!
+          var lista = document.getElementById("listaBebidas");
+          //Añadimos un nuevo elemento <li> a la lista que almacenaremos en la variable nuevoElementoLista 
+          var nuevoElementoLista = document.createElement("li");
+          //Crearemos otra variable para añadir el texto al elemento anterior
+          var contenidoLista = document.createTextNode(bebidaNueva);
+          //Ahora le decimos al elemento padre que añada un hijo que sea la variable anterior para así adjuntar el texto al elemento <li>
+          nuevoElementoLista.appendChild(contenidoLista);
+          //Finalmente a la variable lista que originamos al inicio con nuestra lista predefinida le añadimos el 'nuevoElementoLista'
+          lista.appendChild(nuevoElementoLista);
+        }
+      }
+
+
+// BORRAMOS ELEMENTOS DE LA LISTA***************************************************************************************
+
+
+      function eliminarBebida() {
+        //Cogemos la lista de bebidas que tenemos
+        var lista = document.getElementById('listaBebidas'); 
+        //Cogemos el valor introducido por el usuario de la bebida que desea eliminar
+        var bebidaSeleccionada = Number(document.getElementById('bebidaAEliminar').value); 
+
+        // Verificaremos la condición para que salte una alerta si introducimos valores incorrectos (letras, numeros que no tenemos...)
+        if (isNaN(bebidaSeleccionada) || bebidaSeleccionada < 1 || bebidaSeleccionada > listaBebidas.children.length) {
+            alert('Introduzca un número válido de la lista de bebidas.');
+        } else {   //Cogeremos la bebida a eliminar si los datos introducidos son correctos.
+
+            // Restamos 1 a la posición para que coincida con el índice en el array 
+            var bebidaAEliminar = bebidaSeleccionada - 1;
+            // Eliminamos el elemento de la lista
+            lista.removeChild(lista.children[bebidaAEliminar]);
+            alert('Bebida eliminada exitosamente.');
+        }
+}
+
+    </script>
+  </body>
+</html>

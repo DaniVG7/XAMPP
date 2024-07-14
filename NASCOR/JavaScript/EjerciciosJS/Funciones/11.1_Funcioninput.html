@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculo de precio con IVA y Gastos de envío</title>
+  </head>
+  <body>
+    Precio: <input type="number" id="precio">
+    Impuestos: <input type="number" id="impuestos">
+    <input type="button" onclick="calculaPrecioTotal(
+        document.getElementById('precio').value,
+        document.getElementById('impuestos').value
+    )" value="Calcular"> (El precio del envío es de 10 euros).
+    <div id="resultado"></div>
+    <script>
+      function calculaPrecioTotal(precio, porcentajeImpuestos) {
+        var gastosEnvio = 10;
+        var precioConImpuestos = (1 + porcentajeImpuestos/100) * precio;
+        var precioTotal = precioConImpuestos + gastosEnvio;
+        document.getElementById('resultado').innerHTML=precioTotal.toFixed(2)+' euros.';
+    }
+    // Saldrá el precio total donde se incluye el precio que introducimos sumando el impuesto que introducimos y añadiendole los gastos de envio
+    </script>
+  </body>
+</html>

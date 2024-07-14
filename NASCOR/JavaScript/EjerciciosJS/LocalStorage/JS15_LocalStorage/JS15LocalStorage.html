@@ -1,0 +1,71 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<style>
+		div{
+			margin: auto;
+			background-color: darkseagreen;
+			padding: 15px;
+			border: 2px solid green;
+			border-radius: 15px;
+			width: 600px;
+		}
+		label{
+			width: 50%;
+			display: inline-block;
+			font-weight: bold;
+			vertical-align: top; 
+		}
+		input{width: 30%;}
+	</style>
+</head>
+<body>
+<div>
+<h2>Bebidas</h2>
+<ol id="listabebidas">
+	<li>Café</li>
+	<li>Té</li>
+	<li>Leche</li>
+	<li>Cacaolat</li>
+	<li>Fanta</li>
+</ol>
+<label>Selecciona una bebida:</label><input type="number" id="numbebida">
+<button onclick="seleccionar('bebida','listabebidas')">Seleccionar</button><br><br>
+<label>Añadir bebida:</label><input type="text" id="nombrebebida">
+<button onclick="anadir('bebida','listabebidas')">Añadir bebida</button><br><br>
+<label>Eliminar bebida:</label><input type="number" id="numbebidaeliminar">
+<button onclick="borrar('bebida','listabebidas')">Borrar bebida</button><br><br>
+<p id="demobebida"></p>
+<hr><hr><hr><hr><hr><hr>
+<h2>Pastas</h2>
+<ol id="listapastas">
+	<li>Donuts de chocolate</li>
+	<li>Donuts normales</li>
+	<li>Ensaimadas</li>
+	<li>Galletas</li>
+	<li>Caña chocolate</li>
+</ol>
+<label>Selecciona una pasta: </label><input type="number" id="numpasta">
+<button onclick="seleccionar('pasta','listapastas')">Seleccionar</button><br><br>
+<label>Añadir Pasta: </label><input type="text" id="nombrepasta">
+<button onclick="anadir('pasta','listapastas')">Añadir pasta</button> <br><br>
+<label>Eliminar pasta: </label><input type="number" id="numpastaeliminar">
+<button onclick="borrar('pasta','listapastas')">Borrar pasta</button><br><br>
+<p id="demopasta"></p><br><br>
+<button onclick="guardarListas()" id="guardarListas">Guardar listas</button> 
+<button onclick="recuperarListas()" id="recuperarListas">Recuperar Listas</button>
+<p id="bebidasRecuperadas"></p>
+<p id="pastasRecuperadas"></p>
+</div>
+<script src="JS15LocalStorage.js">// ../JS para acceder a un archivo que hay en una carpeta anterior!</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

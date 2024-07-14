@@ -1,0 +1,224 @@
+*{
+    box-sizing: border-box; /*para que los paddings y contornos no incrementen el tamaño de las cajas*/
+    
+    
+}
+
+body{
+    background-color: rgb(224, 233, 144);
+}
+
+main{
+    width: 70%;
+    margin: auto;
+    max-width: 1400px; /*ancho maximo del contenido de la pagina*/
+    font-family: Arial, Helvetica, sans-serif
+    
+}
+
+
+iframe{
+    
+    width: 100%;
+    height: 423px;
+}
+
+
+header{
+    /*border: 1px solid black;*/
+    /*height: 400px*/
+
+    display: flex;
+    align-items: center; /*centrar elementos verticalmente*/
+    justify-content: center; /*centrar elementos horizontalmente*/
+    
+}
+h1{
+    position: absolute;
+    color: white;
+    font-size: xx-large;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 30px; /*margen interior superior e inferior ; margen interior derecho e izq (30px */
+}
+.contenido{
+    
+    display: flex; /*para alinear la caja section con aside*/
+   
+}
+
+section{
+    width: 80%;
+    display:flex;
+    flex-wrap: wrap; /*activar multilinea, se ponen horizontal*/
+    justify-content: space-between; /*alineacion horizontal*/
+    background-color: rgb(224, 233, 144);
+}
+
+ article{
+    /*border: 1px solid black;*/
+    width: 33%; /*queremos lineas de 3*/
+    /*height: 300px;*/
+    position: relative;
+    overflow: hidden;      
+}
+
+article img{
+    width: 100%; /*ancho adaptado a la caja contenedora, (al estar con display flex el alto se adapta automaticamente*/
+    display: block; /*para eliminar el espaciado interlineal que tienen las imagenes por defecto por el display inline*/ 
+    
+    
+}
+
+article h3{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8); /*fondo titulo semitransparente*/
+    color: white;
+    margin-top:0;
+    padding: 10px;
+}
+
+article p{
+    padding: 10px;
+    font-size: larger;
+}
+
+article h4{
+    background-color: blue;
+    margin: 0;
+    color: white;
+    padding: 7px;
+    text-align: center;
+
+    /* Posiicionar la banda azul*/
+
+    position: absolute; /*posicionar la caja en la esquina superior izquierda de la imagen.*/
+    transform: rotate(-45deg); /*********************************************************!!!!!!!!!rotar la caja 45º en sentido antihorario!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!****************/
+    width: 200px; /*ancho de la caja */
+    position: absolute;
+    top: 20px;
+    left: -65px;
+    
+}
+
+/*estilos para el aside*/
+
+aside{
+    width: 20%; /*lo restante del 80% de section*/
+    border: 1px solid black;
+    /*height: 600px; el mismo que section*/
+    background-color: blue;   
+    border-left: 10px solid blue;
+}
+
+aside div{
+    border: 1px solid black;
+    height: 340px;
+    display: flex;
+    align-items: center; /*centrado de contenido vertical*/
+    justify-content: center; /*centrado horizontal*/
+    overflow: hidden; 
+}
+
+aside h2{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-bottom: 10px solid blue;
+    margin: 0;
+    margin-bottom: 5px;
+    text-align: center; 
+     
+  
+}
+aside div h4{
+    width: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    margin: 0;
+    margin-bottom: 5px;
+    text-align: center; 
+    
+    
+}
+
+.gargantua{
+    background-image: url(../img/aside1.jpg);
+    background-size: cover; /*para que no se repita la imagen y cubra toda la caja*/
+    
+}
+
+.endurance{
+    background-image: url(../img/aside2.jpg);
+    background-size: cover; /* """"""*/
+}
+
+.protas{
+    background-image: url(../img/aside3.jpg);
+    background-size: cover /* """"""*/
+    
+}
+
+
+/* Estilos barra de navegación:*/
+nav{
+    background-color: lightblue;            
+    overflow: hidden; /*indicamos a la caja contenedora que considere los paddings para calcular el alto de la caja*/
+}
+ul{
+    list-style: none; /*suprime las viñetas*/
+    padding: 0; /*eliminar margen interior que las ul y ol tienen por defecto*/   
+    display: flex; 
+    justify-content: center;    
+    justify-content: space-around;
+    margin: 0; /*suprimir margen por defecto de esta etiqueta*/
+}
+
+nav a{
+    text-decoration: none; /*quita el subrayado etc*/       
+    padding: 15px 30px;
+    /*background-color: aquamarine;*/
+    transition: 1s; /*para hacer más lenta la animacion del puntero afecta a todo el contenido del hover*/
+    font-size: 1.5em;
+    /*box-shadow: 5px 5px 5px grey; sombreado de fondo estatico*/
+    display: block;
+}
+
+nav a:hover{
+    cursor: pointer;
+    background-color: #2586d7;
+    color: white;
+    box-shadow: 2px 2px 2px grey; /* sombreado al pulsar, efecto pulsacion al disminuir la sombra*/
+    
+    
+}
+
+
+/*Estilos para el menú desplegable*/
+
+.submenu ul{
+    flex-direction: column; /* cambiar la orientación de los ejes para que se disponga en vertical*/
+    /*display: none;*/
+    justify-content: left;
+    position: absolute; /*para evitar que la etiqueta nav reaclcule el alto cuando se muestre el submenu */
+    z-index: 99; /*para darle prioridad al submenú y que pase por endcima de la caja que lo tapa (plano superior)*/
+    transition: background-color 1s; /* si especificamos el atributo al que le damos una transicion, solo se le dará a ese, en este caso se desplegaria de golpe y transicionaria el color de fondo*/
+    height: 0px;
+    overflow: hidden;
+    
+}
+.submenu li{
+    background-color: lightblue;
+   
+    
+}
+
+.submenu:hover ul{
+   /* display: block ;*/
+    color: white;
+    height: 200px;
+    
+}
+
+
+/* Se puede hacer con el display none+ display block luego en hover,////////////////////////// o con height 0px + overflow hidden y luego dando una altura */

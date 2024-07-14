@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS15-b DOM Lista con adición</title>
+    <style>
+      ol {
+        border: 1px solid black;
+        max-width: max-content;
+        padding: 20px;
+        background-color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Lista de bebidas:</p>
+    <ol id="listaBebidas">
+      <li>Café</li>
+      <li>Té</li>
+      <li>Coca-Cola</li>
+      <li>Fanta</li>
+      <li>Colacao</li>
+      <li>Chocolate</li>
+      <li>Nestea</li>
+      <li>Cafe descafeinado</li>
+    </ol>
+
+    Otra bebida <input type="text" id="nuevaBebida" />
+    <input type="button" value="Añadir" onclick="bebidaAlternativa()" />
+
+    <br /><br /><br />
+    Introduzca el número de la bebida que desea
+    <input type="number" id="bebidaEscogida" />
+
+    <input type="button" onclick="escogerBebida()" value="Escoger bebida" />
+
+    <div id="bebidaSaliente"></div>
+    <script>
+      function escogerBebida() {
+        bebida = Number(document.getElementById("bebidaEscogida").value);
+        x = document.getElementsByTagName("LI");
+        if (isNaN(bebida) || bebida < 1 || bebida > 9) {
+          texto =
+            "<span style=color:red> INTRODUZCA UN NÚMERO DE LA LISTA DE BEBIDAS! <br> Recuerde que solo puede introducir una bebida nueva.</span>";
+        } else {
+          texto =
+            " Gracias por contar con nosotros, disfrute de su " +
+            x[bebida - 1].innerHTML;
+        }
+        document.getElementById("bebidaSaliente").innerHTML = texto;
+      }
+
+      function bebidaAlternativa() {
+        letras = /^[a-zA-Z]+$/;
+        bebidaNueva = document.getElementById("nuevaBebida").value;
+        if (!letras.test(bebidaNueva)) {
+          alert("Introduzca el nombre de una bebida!");
+        } else {
+          alert("Ya añadimos su bebida. Recuerde no añadir más de una.");
+          lista = document.getElementById("listaBebidas"); // Obtener la lista existente !!!!!!!!!!!!!!
+          nuevoElementoLista = document.createElement("li");
+          contenidoLista = document.createTextNode(bebidaNueva);
+          nuevoElementoLista.appendChild(contenidoLista);
+          lista.appendChild(nuevoElementoLista); // Agregar el nuevo elemento a la lista
+        }
+      }
+    </script>
+  </body>
+</html>

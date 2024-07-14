@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            max-width: 800px;
+            text-align: center;
+            margin: auto;
+        }
+        h1{
+            font-size: 40px;
+        }
+        p{
+            font-size: 20px;
+        }
+       
+    </style>
+</head>
+<body><br><br><br>
+    <button onclick="aumentar()">+</button>
+    <button onclick="disminuir()">-</button>
+    
+    <h1 id="titulo">TITULO</h1>
+    <p id="parrafo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure itaque labore minus. Cupiditate hic tenetur praesentium porro voluptatum repellat, in dolor numquam perferendis asperiores aliquid assumenda necessitatibus, commodi laudantium? Recusandae.</p>
+
+    <script>
+         function aumentar() {
+            var titulo = document.getElementById('titulo');
+            var parrafo = document.getElementById('parrafo');
+            
+            // Obtener el tamaño de fuente actual
+            var tituloFontSize = window.getComputedStyle(titulo).fontSize;
+            var parrafoFontSize = window.getComputedStyle(parrafo).fontSize;
+
+            // Convertir el tamaño de fuente a un número
+            var tituloFontSizeNum = parseFloat(tituloFontSize);
+            var parrafoFontSizeNum = parseFloat(parrafoFontSize);
+
+            // Aumentar el tamaño de fuente en 2 píxeles
+            titulo.style.fontSize = (tituloFontSizeNum + 2)+ 'px';
+            parrafo.style.fontSize = (parrafoFontSizeNum + 2)+ 'px' ;
+        }
+
+        function disminuir() {
+            var titulo = document.getElementById('titulo');
+            var parrafo = document.getElementById('parrafo');
+            
+            // Obtener el tamaño de fuente actual
+            var tituloFontSize = window.getComputedStyle(titulo).fontSize;
+            var parrafoFontSize = window.getComputedStyle(parrafo).fontSize;
+
+            // Convertir el tamaño de fuente a un número
+            var tituloFontSizeNum = parseFloat(tituloFontSize);
+            var parrafoFontSizeNum = parseFloat(parrafoFontSize);
+
+            // Disminuir el tamaño de fuente en 2 píxeles
+            titulo.style.fontSize = (tituloFontSizeNum - 2) + 'px';
+            parrafo.style.fontSize = (parrafoFontSizeNum - 2) + 'px';
+        }
+
+
+    </script>
+</body>
+</html>

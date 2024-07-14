@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funciones cálculo</title>
+  </head>
+  <body>
+    <script>
+      function calculaPrecioTotal(precio, porcentajeImpuestos) {
+        var gastosEnvio = 10;
+        var precioConImpuestos = (1 + porcentajeImpuestos / 100) * precio;
+        var precioTotal = precioConImpuestos + gastosEnvio;
+        return precioTotal;
+      }
+      var precioTotal = calculaPrecioTotal(23.34, 21);
+      var otroPrecioTotal = calculaPrecioTotal(15.2, 4);
+      alert(precioTotal.toFixed(2));
+      alert(otroPrecioTotal.toFixed(2));
+      // .toFixed(2) sirve para redondear el numero a 2 decimales.
+
+    </script>
+  </body>
+</html>

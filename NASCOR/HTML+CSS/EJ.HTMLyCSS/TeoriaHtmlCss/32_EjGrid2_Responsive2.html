@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <style>
+	  html{
+		background-color: antiquewhite;
+	  }
+      .img100 {
+        width: 100%;
+      }
+      header {
+        position: relative;
+        margin-bottom: 15px;
+      }
+      h1 {
+        position: absolute;
+        margin: 0px;
+        font-size: 8vw;
+        color: white;
+        width: 100%;
+        text-align: center;
+        top: calc(50% - 4vw);
+      }
+      figure {
+        border: 2px solid black;
+        margin: 0px;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+      figure img {
+        width: 100%;
+      }
+      figcaption {
+        text-align: center;
+      }
+      aside {
+        width: max-content;
+		overflow: hidden;
+      }
+
+      aside label {
+        display: block;
+        margin: 10px;
+      }
+      aside input {
+        align-items: center;
+      }
+      form {
+        border: 2px solid black;
+        padding: 20px;
+      }
+      .redes {
+        position: fixed;
+        bottom: 0px;
+        text-align: center;
+        width: 100%;
+      }
+      .redes h3 {
+        margin-bottom: 0px;
+      }
+      body {
+        padding-bottom: 100px;
+      }
+      @media (min-width: 450px) {
+        main {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 20px;
+        }
+        
+      }
+      @media (min-width: 768px) {
+        main {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+      }
+      @media (min-width: 992px) {
+        main {
+          float: left;
+          width: calc(100% - 250px);
+          box-sizing: border-box;
+		  margin-bottom: 20px;
+        }
+        aside {
+          float: left;
+          width: 250px;
+          box-sizing: border-box;
+          padding-left: 20px;
+        }
+        .redes {
+          text-align: initial;
+        }
+        .redes img {
+          width: 170px;
+        }
+      }
+      @media (min-width: 1200px) {
+        .contenedor {
+          width: 1190px;
+          margin: 0 auto;
+        }
+        h1 {
+          font-size: 80px;
+        }
+		
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contenedor">
+      <header>
+        <h1>Esta es nuestra web</h1>
+        <img src="imagenesGrid2/localizacion.jpg" class="img100" />
+      </header>
+      <main>
+        <figure>
+          <img src="imagenesGrid2/imagen1.jpg" />
+          <figcaption>Imagen 1</figcaption>
+        </figure>
+        <figure>
+          <img src="imagenesGrid2/imagen2.jpg" />
+          <figcaption>Imagen 2</figcaption>
+        </figure>
+        <figure>
+          <img src="imagenesGrid2/imagen3.jpg" />
+          <figcaption>Imagen 3</figcaption>
+        </figure>
+        <figure>
+          <img src="imagenesGrid2/imagen4.jpg" />
+          <figcaption>Imagen 4</figcaption>
+        </figure>
+        <figure>
+          <img src="imagenesGrid2/imagen5.jpg" />
+          <figcaption>Imagen 5</figcaption>
+        </figure>
+        <figure>
+          <img src="imagenesGrid2/imagen6.jpg" />
+          <figcaption>Imagen 6</figcaption>
+        </figure>
+      </main>
+      <aside>
+        <form>
+          <label for="nombre">Nombre y apellido:</label>
+          <input
+            type="text"
+            name="nombre"
+            id="nombre"
+            placeholder="Nombre y apellido"
+          />
+          <label for="correo">Correo electrónico:</label>
+          <input
+            type="text"
+            name="correo"
+            id="correo"
+            placeholder="email@mipagina.com"
+          />
+        </form>
+        <div class="redes">
+          <h3>Comparte:</h3>
+          <img src="imagenesGrid2/redes-sociales.png" />
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>

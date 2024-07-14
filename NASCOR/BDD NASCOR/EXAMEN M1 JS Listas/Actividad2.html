@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas JS</title>
+    <link rel="stylesheet" href="Actividad2.css">
+</head>
+<body>
+    <h1>  Personalice su menú </h1>
+    <main>
+        <div id="lista1">
+            <h2>ENTRANTES</h2>
+            <ol id="listaEntrantes">
+                <li>Gazpacho</li>
+                <li>Ensalada tropical</li>
+                <li>Ensalada queso cabra</li>
+                <li>Sopa</li>
+            </ol>
+                <br><label for="">Escoja un Entrante:</label><br>
+                <input type="number" name="" id="numeroEntrante">
+                <button onclick="escoger('Entrante', 'listaEntrantes')">Escoger</button><br><br>
+                <label for="">Elimine un Entrante:</label><br>
+                <input type="number" name="" id="eliminarEntrante">
+                <button onclick="eliminar('Entrante', 'listaEntrantes')">Eliminar</button><br><br>
+                <label for="">Añada un Entrante: </label><br>
+                <input type="text" name="" id="añadirEntrante">
+                <button onclick="añadir('Entrante', 'listaEntrantes')">Añadir</button><br><br>
+                <div id="resultadoEntrante"></div><br><br>
+        </div>
+        <div id="lista2">   
+            <h2>PLATOS PRINCIPALES</h2>
+            <ol id="listaPlatosP">
+                <li>Paella de marisco</li>
+                <li>Fideuá</li>
+                <li>Arroz negro</li>
+                <li>Solomillo con salsa de pimienta</li>
+            </ol>
+                <br><label for="">Escoja un Plato: </label><br>
+                <input type="number" name="" id="numeroPlatoPrincipal">
+                <button onclick="escoger('PlatoPrincipal', 'listaPlatosP')">Escoger</button><br><br>        
+                <label for="">Elimine un Plato: </label><br>
+                <input type="number" name="" id="eliminarPlatoPrincipal">
+                <button onclick="eliminar('PlatoPrincipal', 'listaPlatosP')">Eliminar</button><br><br>
+                <label for="">Añada un Plato: </label><br>
+                <input type="text" name="" id="añadirPlatoPrincipal">
+                <button onclick="añadir('PlatoPrincipal', 'listaPlatosP')">Añadir</button><br><br>
+                <div id="resultadoPlatoPrincipal"></div><br><br>
+        </div>
+        <div id="lista3">
+            <h2>POSTRES</h2>
+            <ol id="listaPostres">
+                <li>Flan de huevo</li>
+                <li>Tarta de queso</li>
+                <li>Brownie de chocolate</li>
+                <li>Zumo de naranja</li>
+            </ol>
+                <br><label for="">Escoja un Postre: </label><br>
+                <input type="number" name="" id="numeroPostre">
+                <button onclick="escoger('Postre', 'listaPostres')">Escoger</button><br><br> 
+                <label for="">Elimine un Postre: </label><br>
+                <input type="number" name="" id="eliminarPostre">
+                <button onclick="eliminar('Postre', 'listaPostres')">Eliminar</button><br><br>
+                <label for="">Añada un Postre: </label><br>
+                <input type="text" name="" id="añadirPostre">
+                <button onclick="añadir('Postre', 'listaPostres')">Añadir</button><br><br>    
+                <div id="resultadoPostre"></div><br><br>
+        </div>
+        <div id="menu"><h4>MENÚ PERSONALIZADO: 🍽️🍴🥄</h4><br>
+        <input type="button" name="" id="" value="Vaciar menú" onclick="vaciarMenu()">
+        </div>
+        
+        
+    </main>
+    
+    
+    
+    
+
+    <script src="Actividad2.JS"></script>
+</body>
+</html>

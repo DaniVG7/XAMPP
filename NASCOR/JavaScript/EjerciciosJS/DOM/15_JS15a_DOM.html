@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS15-a DOM Lista Bebidas</title>
+    <style>
+        ol{
+            border: 1px solid black;
+            max-width: max-content;
+            padding: 20px;
+            background-color: blueviolet;
+        }
+    </style>
+  </head>
+  <body>
+    <p>Lista de bebidas:</p>
+    <ol>
+      <li>Café</li>
+      <li>Té</li>
+      <li>Coca-Cola</li>
+      <li>Fanta</li>
+      <li>Colacao</li>
+      <li>Chocolate</li>
+      <li>Nestea</li>
+      <li>Cafe descafeinado</li>
+    </ol>
+    Introduzca el número de la bebida que desea  <input type="number" id="bebidaEscogida">
+    
+    <input type="button" onclick="escogerBebida()" value='Escoger bebida'>
+
+    <div id="bebidaSaliente"></div>
+    <script>
+      function escogerBebida() {
+        var bebida = Number(document.getElementById('bebidaEscogida').value);
+        var x = document.getElementsByTagName("LI");
+        if(isNaN(bebida) || bebida < 1 || bebida > 8){
+            texto = '<span style=color:red> INTRODUZCA UN NÚMERO DE LA LISTA DE BEBIDAS! </span>'
+        } else{
+            texto = ' Gracias por contar con nosotros, disfrute de su ' + x[bebida-1].innerHTML;
+        }
+        document.getElementById('bebidaSaliente').innerHTML = texto;       
+        
+      }
+    </script>
+  </body>
+</html>

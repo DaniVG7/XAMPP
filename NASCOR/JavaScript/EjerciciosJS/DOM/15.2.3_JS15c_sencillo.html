@@ -1,0 +1,71 @@
+<html>
+<head>
+	<meta charset="UTF-8" />
+</head>
+<body>
+<p>Lista con orden:</p>
+<ol id="listaBebidas">
+<li>Coffee</li>
+<li>Tea</li>
+<li>Milk</li>
+</ol>
+Selecciona una bebiba: <input type="number" id="numbebida">
+<button onclick="seleccionarBebida()">Seleccionar</button>
+Añadir bebida: <input type="text" id="nombreBebida">
+<button onclick="añadirBebida()">Añadir bebida</button>
+Eliminar bebida: <input type="number" id="numbebidaEliminar">
+<button onclick="borrarBebida()">Borrar bebida</button>
+<p id="demo"></p>
+
+
+
+<script>
+	function seleccionarBebida() {
+	//Seleccionamos el número de bebida
+	var num=document.getElementById('numbebida').value;
+	//Seleccionamos el array de LI's del documento.
+	var x = document.getElementsByTagName("LI");
+	//Le restamos una unidad al número que hemos elegido pq los
+	//arrays empiezan en 0. 
+	document.getElementById("demo").innerHTML= x[num-1].innerHTML;
+}
+function añadirBebida() {
+	//Obtener nombre bebida a insertar
+	var nombre = document.getElementById("nombreBebida").value;
+	//Creamos el nodo li
+	var nodoLi = document.createElement("li");
+	//Creamos el nodo de texto
+	var nodoTexto = document.createTextNode(nombre);
+	//Unimos el nodo texto como hijo del nodoLi
+	nodoLi.appendChild(nodoTexto);
+	//Selecionar el nodo lista Bebidas
+	listaBebidas=document.getElementById('listaBebidas');
+	//Añadimos el li al body
+	listaBebidas.appendChild(nodoLi);
+	document.getElementById("demo").innerHTML = 'Bebida insertada';
+}
+function borrarBebida() {
+	//Seleccionamos el número de bebida
+	var num=document.getElementById('numbebidaEliminar').value;
+	//Seleccionamos el array de LI's del documento.
+	var x = document.getElementsByTagName("LI");
+	// Seleccionamos el elemento a eliminar y es el padre el que lo elimina.
+	x[num - 1].parentNode.removeChild(x[num - 1]);	
+	document.getElementById("demo").innerHTML = 'Bebida eliminada';
+}
+</script>
+</body>
+</html>
+<!--
+1: x[0]='<li>Coffee</li>'
+2: x[1]='<li>Tea</li>'
+3: x[2]='<li>Milk</li>'
+-->
+
+
+
+
+
+
+
+

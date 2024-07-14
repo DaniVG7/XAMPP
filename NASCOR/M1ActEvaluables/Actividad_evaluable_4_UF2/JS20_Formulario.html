@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS20 formularios JS</title>
+    <link rel="stylesheet" href="JS20.css">
+</head>
+<body>
+    <form id="miFormulario" action="" onsubmit="return validarFormulario()" method="">
+        <label for="nombre">Nombre (obligatorio):</label><input  type="text" id="nombre"  onblur="validarNombre()"><br><br>
+        <div id="mensajeNombre"></div>
+        <label for="primerApellido">Primer apellido (obligatorio):</label><input type="text" id="primerApellido" onblur="validarApellido1()"><br><br>
+        <div id="mensajeApellido1"></div>
+        <label for="segundoApellido">Segundo apellido (obligatorio):</label><input type="text" id="segundoApellido" onblur="validarApellido2()"><br><br>
+        <div id="mensajeApellido2"></div>
+        <label for="telefono">Teléfono (opcional):</label><input type="text" id="telefono" onblur="validarTelefono()"><br><br>
+        <div id="mensajeTelefono"></div>
+        <label for="fechaNacimiento">Fecha de Nacimiento (opcional):</label><input type="date" id="fechaNacimiento" onblur="validarFecha()"><br><br>
+        <div id="mensajeFecha"></div>
+        <label for="email">Email (opcional):</label><input type="email" id="email" onblur="validarEmail()"><br><br>
+        <div id="mensajeEmail"></div>
+        <label for="condiciones">He leido y acepto los términos y condiciones de privacidad.</label><input type="checkbox" id="condicionesPrivacidad" onblur="validarCondiciones()"><br><br>
+        <div id="mensajeCondiciones"></div>
+        <input type="submit" value="Enviar" id="botonEnviar"/>
+        <button type="reset" value="Mandar" id="botonEnviar">Restablecer Valores</button>
+
+    </form>
+
+
+   <script src="JS20.js"></script>
+</body>
+</html>

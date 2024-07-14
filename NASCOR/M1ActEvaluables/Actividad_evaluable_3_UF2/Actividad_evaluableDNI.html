@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador DNI</title>
+    <link rel="stylesheet" href="CSS/ejdni.css">
+</head>
+<body>
+    <main>
+        <h1>Validador de DNI</h1>
+        <span>Introduzca su NÚMERO de DNI sin la letra </span>
+        <input type="number" name="" id="numerointroducido" min="0" max="99999999" minlength="1" maxlength="8" required placeholder="Número DNI" autofocus>
+        <span>Introduzca la LETRA de su DNI</span>
+        <input type="text" id="letraintroducida" style="width: 60px;" required placeholder="Letra DNI" >
+        <button onclick="calcularDNI ()">Comprobar</button>
+        <div id="resultadoDni"></div>
+    </main>
+    <script src="JS/ejdni.js"></script>
+</body>
+</html>

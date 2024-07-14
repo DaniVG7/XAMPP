@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS15-c DOM 2 Listas, Funciones combinadas</title>
+    <style>
+      ol {
+        border: 1px solid black;
+        max-width: max-content;
+        padding: 20px;
+        background-color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Lista de bebidas:</p>
+    <ol id="listaBebidas">
+      <li>Café</li>
+      <li>Té</li>
+      <li>Coca-Cola</li>
+      <li>Fanta</li>
+      <li>Colacao</li>
+      <li>Chocolate</li>
+      <li>Nestea</li>
+      <li>Cafe descafeinado</li>
+    </ol>
+
+    Otra bebida <input type="text" id="nuevaBebida" />
+    <input type="button" value="Añadir" onclick="bebidaAlternativa()" />
+    <br>
+    Elija una bebida para borrar <input type="number" id="bebidaAEliminar">
+    <input type="button" value="Eliminar bebida" onclick="eliminarBebida()">
+
+    <br /><br /><br />
+    Introduzca el número de la bebida que desea
+    <input type="number" id="bebidaEscogida" />
+
+    <input type="button" onclick="seleccionar('bebida')" value="Escoger bebida">
+
+    <div id="bebidaSaliente"></div>
+
+    <p>Lista de pastas:</p>
+    <ol id="listaPastas">
+      <li>Croissant</li>
+      <li>Madalena</li>
+      <li>Donut</li>
+      <li>Ensaimada</li>
+      <li>Palmera</li>
+      <li>Galletas</li>
+      <li>Caña de crema</li>
+    </ol>
+
+    Otra pasta <input type="text" id="nuevaPasta" />
+    <input type="button" value="Añadir" onclick="pastaAlternativa()" />
+    <br>
+    Elija una pasta para borrar <input type="number" id="pastaAEliminar">
+    <input type="button" value="Eliminar pasta" onclick="eliminarPasta()">
+
+    <br /><br /><br />
+    Introduzca el número de la pasta que desea
+    <input type="number" id="pastaEscogida" />
+
+    <input type="button" onclick="seleccionar('pasta')" value="Escoger Pasta" />
+
+    <div id="pastaSaliente"></div>
+
+
+
+    <script>
+
+function seleccionar(tipo) {
+  var elemento, lista, mensajeError, mensajeExito, lista;
+
+  if (tipo == "bebida") {
+    elemento = document.getElementById("bebidaEscogida");
+    lista = document.getElementById("listaBebidas");
+    var mensajeError = "<span style=color:red> INTRODUZCA UN NÚMERO DE LA LISTA DE BEBIDAS!</span>";
+    var mensajeExito = "Gracias por contar con nosotros, disfrute de su ";
+    lista = lista.getElementsByTagName("li");
+  } else if (tipo == "pasta") {
+    elemento = document.getElementById("pastaEscogida");
+    lista = document.getElementById("listaPastas");
+    mensajeError = "<span style=color:red> INTRODUZCA UN NÚMERO DE LA LISTA DE PASTAS!</span>";
+    mensajeExito = "Gracias por contar con nosotros, disfrute de su ";
+    lista = lista.getElementsByTagName("li");
+  } else {
+    alert("Tipo de item no válido");
+    return; // Salir de la función si el tipo de item no es válido
+  }
+
+  seleccion = elemento.value;
+
+  if (isNaN(seleccion) || seleccion < 1 || seleccion > lista.length) {
+    document.getElementById(tipo + "Saliente").innerHTML = mensajeError;
+  } else {
+    document.getElementById(tipo + "Saliente").innerHTML = mensajeExito + lista[seleccion - 1].innerHTML;
+  }
+}
+
+
+      function bebidaAlternativa() {
+        var letras = /^[a-zA-Z]+$/;
+        var bebidaNueva = document.getElementById("nuevaBebida").value; 
+        if (!letras.test(bebidaNueva)) {
+          alert("Introduzca el nombre de una bebida!");
+        } else {
+          alert("Bebida añadida correctamente✅");
+          var lista = document.getElementById("listaBebidas");
+          var nuevoElementoLista = document.createElement("li");
+          var contenidoLista = document.createTextNode(bebidaNueva);
+          nuevoElementoLista.appendChild(contenidoLista);
+          lista.appendChild(nuevoElementoLista);
+        }
+      }
+
+
+      function eliminarBebida() {
+        var lista = document.getElementById('listaBebidas'); 
+        var bebidaSeleccionada = Number(document.getElementById('bebidaAEliminar').value); 
+
+        if (isNaN(bebidaSeleccionada) || bebidaSeleccionada < 1 || bebidaSeleccionada > listaBebidas.children.length) {
+            alert('Introduzca un número válido de la lista de bebidas.');
+        } else {   
+            var bebidaAEliminar = bebidaSeleccionada - 1;
+            //una forma diferente de coger el elemento LI para borrarlo sin usar el getElementsbytagname('LI').
+            lista.removeChild(lista.children[bebidaAEliminar]);
+            alert('Bebida eliminada exitosamente.');
+        }
+}
+
+
+
+
+      function pastaAlternativa() {
+        var pastaNueva = document.getElementById("nuevaPasta").value; 
+        var letras = /^[a-zA-Z]+$/;
+        if (!letras.test('nuevaPasta')) {
+          alert("Introduzca el nombre de una pasta!");
+        } else {
+          alert("Pasta añadida correctamente✅");
+          var lista = document.getElementById("listaPastas");
+          var nuevoElementoLista = document.createElement("li");
+          var contenidoLista = document.createTextNode(pastaNueva);
+          nuevoElementoLista.appendChild(contenidoLista);
+          lista.appendChild(nuevoElementoLista);
+        }
+      }
+
+      function eliminarPasta() {
+        var lista = document.getElementById('listaPastas'); 
+        var pastaSeleccionada = Number(document.getElementById('pastaAEliminar').value); 
+
+        if (isNaN(pastaSeleccionada) || pastaSeleccionada < 1 || pastaSeleccionada > listaPastas.children.length) {
+            alert('Introduzca un número válido de la lista de pastas.');
+        } else { 
+            var pastaAEliminar = pastaSeleccionada - 1;
+            lista.removeChild(lista.children[pastaAEliminar]);
+            alert('Pasta eliminada exitosamente.');
+        }
+}
+    </script>
+  </body>
+</html>

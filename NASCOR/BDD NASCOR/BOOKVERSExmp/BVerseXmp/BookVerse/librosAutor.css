@@ -1,0 +1,120 @@
+/* Estilos generales */
+.cabecera{display:none;}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    margin: auto;
+    padding: 0;
+    color: white;
+	position:relative;
+	margin:auto;
+	max-width: 1500px;
+}
+
+/* Estilos para botones */
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+	transition: 1s;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+/* Estilos para enlaces */
+a {
+    text-decoration: none;
+    color: #007BFF;
+}
+.navbar button{
+	height: 74px;
+	padding: 20px 50px;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+    background-color: #007BFF;
+	justify-content: space-around;
+	border-radius: 5px;
+}
+
+.navbar a {
+    color: white;
+}
+
+
+
+/* Estilos para el título principal */
+h3 {
+    font-size: 24px;
+    color: white;
+}
+
+main{
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Estilos para imágenes */
+img {
+    width: 150px;
+    height: 200px;
+}
+
+/* Estilos para la sección de cuenta */
+.cuenta {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 10px;
+	margin-top:0;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+	text-align: center;
+	height: max-content;
+}
+
+main{
+	display:grid;
+	grid-template-columns: auto auto;
+}
+
+h3{
+	text-align:center;
+}
+
+.libro{
+	margin-top: 20px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom: 30px;
+	border: 1px solid white;
+	width:400px;
+	border-radius: 5px;
+	text-align:center;
+}
+.libro img{
+	margin: auto;
+}
+.libro h3{
+	background-color: #007BFF;
+	margin-top: 0;
+	padding: 20px;
+	text-align: center
+}
+.libro button{
+	margin-bottom: 20px;
+}

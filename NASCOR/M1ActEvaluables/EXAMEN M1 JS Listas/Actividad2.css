@@ -1,0 +1,56 @@
+body {
+  max-width: 1200px;
+  width: 1100px;
+  margin: auto;
+  background-color: rgb(248, 207, 232);
+}
+h1 {
+  text-align: center;
+}
+
+main {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+h2 {
+  text-align: center;
+}
+input {
+  border-radius: 5px;
+}
+#lista1 {
+  background-color: rgb(171, 188, 188);
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 20px;
+}
+#lista2 {
+  background-color: rgb(205, 245, 119);
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 20px;
+}
+#lista3 {
+  background-color: rgb(126, 173, 238);
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 20px;
+}
+
+#menu {
+  background-color: aliceblue;
+  width: 300px;
+  border-radius: 10px;
+  padding: 10px;
+  border: 2px solid black;
+  margin: 20px;
+}
+h4 {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-size: smaller;
+}

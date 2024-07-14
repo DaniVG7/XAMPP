@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOR IN</title>
+</head>
+<body>
+    <script>
+        const meses = ['Enero,', 'Febrero,', 'Marzo,', 'Abril,', 'Mayo,', 'Junio,', 'Julio,', 'Agosto,', 'Septiembre,', 'Octubre,', 'Noviembre,', 'Diciembre.'];
+
+        var text = '';
+        for (var x in meses){   //buscar dentro del array 'meses'
+            text += meses [x] + ' ';  //decimos que muestre todo el array, una vez se acaba el array, acaba el bucle.
+        }
+        alert (text)
+    </script>
+</body>
+</html>

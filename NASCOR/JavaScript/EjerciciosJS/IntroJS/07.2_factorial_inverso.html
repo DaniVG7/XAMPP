@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForFact</title>
+</head>
+<body>
+
+    Escribe un número <input type="number" id="numintroducido" min=0 > <br>
+
+
+    <button onclick="factorizar()"> Factorizar</button>
+    <p id="resultado"></p>
+
+
+    <script>
+        function factorizar(){
+            var num= Number(document.getElementById('numintroducido').value);
+            var factorial= 1;
+            for (i=num; i>1; i--){ //También puede hacerse un bucle disminuyendo valores pero habrá que cambiar condicionales. Ej anterior es decir el valor inicial es el numero introducido por el usuario. el num es + que 1? pues reducimos un numero y vamos multiplicando en bucle. 5 es > que 1? pues se multiplica y se baja una cifra. 4 es mayor que 1? pues se multiplica por 5 y se baja una cifra. 3 es mayor que 1? pues idem. (5*4*3... hasta llegar hasta 1)
+                factorial= (factorial * i)
+            }
+            document.getElementById('resultado').innerHTML = factorial;
+        }
+        
+    </script>
+    
+</body>
+</html>

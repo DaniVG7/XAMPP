@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript en el propio documento</title>
+    <script> //Si queremos linkear una hoja, dentro de la etiqueta pondremos la ruta :  <script src="JS/01_index.js>" 
+        alert("Hola Mundo");
+        alert("Soy el primer script")
+        document.write("Bienvenidos a mi primer JavaScript") //Estos tres elementos se dejaran de ver en caso de que pongamos una hoja de JS delante
+    </script>
+</head>
+<body>
+    
+    <noscript> <!--Esto sirve para mostrar en el navegador el siguiente texto en caso de que no este activado JS -->
+        <p>Bienvenido a mi sitio web</p>
+        <p>Lamentablemente la página que estás viendo requiere el uso de JavaScript para su funcionamiento. Si lees esto, es porque no lo tienes activado, por favor activa Javascript. </p>
+    </noscript>
+    <script >        
+        // document.write("Adios Mundo Cruel"); Esto sirve para escribir una linea en el html
+        console.log ("Hola Mundo!"); //Esto sirve para mostrar el mensaje entre () en la consola de herramientas de desarrollo
+    </script>
+</body>
+</html>

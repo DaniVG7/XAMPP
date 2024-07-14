@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú con listas</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        nav{
+            width: 60%;
+            margin: auto;
+            
+            overflow: hidden /*indicamos a la caja contenedora que considere los paddings para calcular el alto de la caja*/
+        }
+        ul{
+            list-style: none; /*suprime las viñetas*/
+            padding: 0; /*eliminar margen interior que las ul y ol tienen por defecto*/   
+            display: flex; 
+            justify-content: center;        
+            
+        }
+        nav a{
+            text-decoration: none; /*quita el subrayado etc*/       
+            padding: 10px;
+            background-color: aquamarine;
+            transition: 1s; /*para hacer más lenta la animacion del puntero afecta a todo el contenido del hover*/
+            box-shadow: 5px 5px 5px grey; /*sombreado de fondo estatico*/
+        }
+        nav a:hover{
+            cursor: pointer;
+            background-color: #2586d7;
+            color: blueviolet;
+            box-shadow: 2px 2px 2px grey; /*sombreado al pulsar, efecto pulsacion al disminuir la sombra*/
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Sobre Nosotros</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Contacto</a></li>
+
+        </ul>
+    </nav>
+    
+</body>
+</html>

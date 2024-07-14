@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador DNI</title>
+    <link rel="stylesheet" href="ejdni.css">
+</head>
+<body>
+    <main>
+        <h1>Validador de DNI</h1>
+        <form action="validarDni.php" method="post">
+            <span>Introduzca su NÚMERO de DNI sin la letra </span>
+            <input type="text" name="numeroDNI" id="numeroDNI" min="0" max="99999999" minlength="1" maxlength="8" required placeholder="Número DNI" autofocus>
+            <span>Introduzca la LETRA de su DNI</span>
+            <input type="text" name="letraDNI" style="width: 60px;" required placeholder="Letra DNI" >
+            <input type="submit" value="Validar DNI">
+        </form>
+       
+    </main>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas JS</title>
+    <style>
+        body{max-width: 1200px; width: 1100px;margin: auto; background-color: rgb(248, 207, 232);}
+        h1{text-align: center;}
+        main{
+            display: grid;
+            grid-template-columns: auto auto auto;
+
+        }
+        h2{text-align: center;}
+        input{border-radius: 5px;}
+        #lista1 {background-color: rgb(171, 188, 188); border: 2px solid black; border-radius: 20px; padding: 10px; margin: 20px;}
+        #lista2 {background-color: rgb(205, 245, 119); border: 2px solid black; border-radius: 20px; padding: 10px; margin: 20px;}
+        #lista3 {background-color: rgb(126, 173, 238); border: 2px solid black; border-radius: 20px; padding: 10px; margin: 20px;}
+        
+        #cesta{background-color: aliceblue;width: 200px;border-radius: 10px; padding: 10px; border: 2px solid black; margin: 20px;}
+        h4{text-align: center; margin: 0; padding: 0; font-size: smaller;} 
+    </style>
+</head>
+<body>
+    <h1>  COCHES , COLOR y ACABADO</h1>
+    <main>
+        <div id="lista1">
+            <h2>Marca y Modelo</h2>
+            <ol id="listaModelos">
+                <li>Seat Leon</li>
+                <li>Ford Focus</li>
+                <li>Bmw Serie 1</li>
+                <li>Peugeot 308</li>
+            </ol>
+                <br><label for="">Escoge un Modelo:</label><br>
+                <input type="number" name="" id="numeroModelo">
+                <button onclick="escoger('Modelo', 'listaModelos')">Escoger</button><br><br>
+                <label for="">Elimina un Modelo:</label><br>
+                <input type="number" name="" id="eliminarModelo">
+                <button onclick="eliminar('Modelo', 'listaModelos')">Eliminar</button><br><br>
+                <label for="">Añade un Modelo: </label><br>
+                <input type="text" name="" id="añadirModelo">
+                <button onclick="añadir('Modelo', 'listaModelos')">Añadir</button><br><br>
+                <div id="resultadoModelo"></div><br><br>
+        </div>
+        <div id="lista2">   
+            <h2>Color</h2>
+            <ol id="listaColores">
+                <li>Azul cromado</li>
+                <li>Blanco</li>
+                <li>Negro</li>
+                <li>Rojo</li>
+            </ol>
+                <br><label for="">Escoge un Color: </label><br>
+                <input type="number" name="" id="numeroColor">
+                <button onclick="escoger('Color', 'listaColores')">Escoger</button><br><br>        
+                <label for="">Elimina un Color: </label><br>
+                <input type="number" name="" id="eliminarColor">
+                <button onclick="eliminar('Color', 'listaColores')">Eliminar</button><br><br>
+                <label for="">Añade un Color: </label><br>
+                <input type="text" name="" id="añadirColor">
+                <button onclick="añadir('Color', 'listaColores')">Añadir</button><br><br>
+                <div id="resultadoColor"></div><br><br>
+        </div>
+        <div id="lista3">
+            <h2>Acabado</h2>
+            <ol id="listaAcabados">
+                <li>Sport</li>
+                <li>Premium</li>
+                <li>Básico</li>
+                <li>Fr/St/M</li>
+            </ol>
+                <br><label for="">Escoge un Acabado: </label><br>
+                <input type="number" name="" id="numeroAcabado">
+                <button onclick="escoger('Acabado', 'listaAcabados')">Escoger</button><br><br> 
+                <label for="">Elimina un Acabado: </label><br>
+                <input type="number" name="" id="eliminarAcabado">
+                <button onclick="eliminar('Acabado', 'listaAcabados')">Eliminar</button><br><br>
+                <label for="">Añade un Acabado: </label><br>
+                <input type="text" name="" id="añadirAcabado">
+                <button onclick="añadir('Acabado', 'listaAcabados')">Añadir</button><br><br>    
+                <div id="resultadoAcabado"></div><br><br>
+        </div>
+        <div id="cesta"><h4>CESTA DE LA COMPRA 🛒</h4><br>
+        <input type="button" name="" id="" value="Vaciar cesta" onclick="vaciarCesta()">
+        </div>
+        
+        
+    </main>
+    
+    
+    
+    
+
+    <script src="coches.js"></script>
+</body>
+</html>

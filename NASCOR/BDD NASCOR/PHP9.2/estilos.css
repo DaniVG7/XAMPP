@@ -1,0 +1,7 @@
+body {
+	color: blue; /* Damos estilo al body en hmtl*/
+}
+
+pre {
+	color: orange; /* El color cambiará luego al coger la etiqueta pre de PHP */
+}

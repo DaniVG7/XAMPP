@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EjercicioGrid2</title>
+    <style>
+      html {
+        background-color: wheat;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+      }
+      .contenedor {
+        width: 100%;
+        max-width: 550px;
+        margin: auto;
+      }
+      header {
+        background-image: url(imagenes/kings-league_logo-summa-1024x577.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: auto;
+        height: 300px;
+        width: 100%;
+        position: relative;
+        font-size: small;
+
+      }
+      header h1 {
+        color: white;
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+      }
+      section {
+        border: 2px solid green;
+        margin: 10px;
+      }
+      section img {
+        width: 100%;
+      }
+      section h3 {
+        text-align: center;
+        transition: 1s;
+      }
+
+      section h3:hover{
+        cursor: pointer;
+        background-color: white;
+        height: 80px;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+
+      }
+
+      aside {
+        border: 2px solid green;
+        margin: 10px;
+        padding: 20px;
+      }
+      aside label {
+        display: block;
+        margin: 10px;
+      }
+      aside input {
+        border: 2px solid green;
+        margin: 10px;
+      }
+      textarea{
+        display: block;
+        margin: 10px;
+      }
+      footer {
+        position: relative;
+      }
+      .piepag div {
+        position: fixed;
+        right: 100px;
+        bottom: 0;
+      }
+      
+      body{
+        padding-bottom: 100px;
+      }
+
+      @media (min-width: 700px) {
+        .contenedor {
+          max-width: 1100px;
+          margin: auto;
+        }
+        header {
+          font-size: large;
+        }
+        main {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+        }
+        aside {
+          float: right;
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (min-width: 1100px) {
+        main {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+        header {
+          font-size: x-large;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contenedor">
+      <header>
+        <h1>Esta es nuestra web</h1>
+      </header>
+      <aside>
+        <form>
+          <label for="nombre">Nombre y apellido:</label>
+          <input type="text" name="nombre" id="nombre" placeholder="Nombre y apellido" />
+          <label for="correo">Correo electrónico:</label>
+          <input type="text" name="correo" id="correo" placeholder="email@mipagina.com"/>
+        </form>
+      </aside>
+      <main>
+        <section>
+          <img src="imagenes grid 2/imagen1.jpg" alt="" />
+          <h3>Memoria USB</h3>
+        </section>
+        <section>
+          <img src="imagenes grid 2/imagen2.jpg" alt="" />
+          <h3>Set escritura Pierre Cardine</h3>
+        </section>
+        <section>
+          <img src="imagenes grid 2/imagen3.jpg" alt="" />
+          <h3>Caja regalo</h3>
+        </section>
+        <section>
+          <img src="imagenes grid 2/imagen4.jpg" alt="" />
+          <h3>Altavoz bluetooth</h3>
+        </section>
+        <section>
+          <img src="imagenes grid 2/imagen5.jpg" alt="" />
+          <h3>Localizador bluetooth</h3>
+        </section>
+        <section>
+          <img src="imagenes grid 2/imagen6.jpg" alt="" />
+          <h3>Carpeta de corcho</h3>
+        </section>
+      </main>
+
+      <footer class="piepag">
+        <div>
+          <h2>Comparte:</h2>
+          <img src="img/facebook_logo.jpg" alt="" />
+          <img src="img/linkedin_logo.png" alt="" />
+          <img src="img/linkedin_logo.png" alt="" />
+          <img src="img/google_plus_logo.png" alt="" />
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

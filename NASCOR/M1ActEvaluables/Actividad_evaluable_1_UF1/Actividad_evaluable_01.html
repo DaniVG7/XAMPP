@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio recopilatorio</title>
+    <style>
+        html {
+            background-image: url(https://static.vecteezy.com/system/resources/previews/006/262/287/non_2x/white-abstract-background-backdrop-for-presentation-design-for-website-free-photo.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        main {
+            margin: auto;
+            width: 600px;
+            max-width: 600px;
+            margin-bottom: 5px;
+            border: 1px solid black;
+            padding: 10px;
+            background-color: blanchedalmond;
+        }
+
+        header {
+            text-align: center;
+            border: 1px solid black;            
+            margin: auto;
+            margin-bottom: 10px;
+
+        }
+
+        div {
+            border: 1px solid black;
+            border-radius: 25px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        nav {
+            text-align: center;
+            border: 1px solid black;
+            padding: 10px;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+
+        nav button {
+            width: 100px;
+            height: 30px;
+            color: blue;
+            background-color: grey;
+            text-align: center;
+            align-items: center;
+
+        }
+
+        nav button:hover {
+            background-color: yellow;
+            cursor: pointer;
+        }
+
+        .imagen {
+            margin-right: 15px;
+            float: left;
+            width: 50%;
+            height: 50%;
+        }
+
+        ul {
+            list-style: url(img/gorro_cocina.png);
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+        }
+
+
+        ol {
+            list-style: decimal;
+            font-size: 12px;
+
+        }
+
+        table {
+            margin: auto;
+        }
+
+        td,
+        tr,
+        th {
+            border: 2px solid blue;
+            padding: 5px;
+            width: 50px;
+            height: 30px;
+        }
+
+
+        footer {
+            border: 1px solid black;
+            border-radius: 0px 40px 0px 40px;
+            max-width: max-content;
+            text-align: center;
+            padding: 10px;
+            margin: auto;
+            background-color: black;
+            color: whitesmoke;
+
+        }
+        .parrafo2{
+            clear: left;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+
+<body>
+    <main>
+        <header>
+            <h1>EJERCICIO RECOPILATORIO</h1>
+        </header>
+
+        <nav>
+            <a href="#Sección 1"><button>Sección 1</button></a>
+            <a href="#Sección 2"><button>Sección 2</button></a>
+            <a href="#Sección 3"><button>Sección 3</button></a>
+            <a href="#Sección 4"><button>Sección 4</button></a>
+
+        </nav>
+
+        <div id="Sección 1">
+            <h2>Sección 1: IMAGEN Y TEXTO ALREDEDOR</h2>
+            <p style="text-align: justify;"><img src="img/img1.jpg" class="imagen">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque omnis voluptas cum totam atque
+                asperiores, ratione quisquam sit ab minus aliquid provident numquam? Facilis sapiente cupiditate iusto
+                mollitia id reprehenderit.</p>
+            
+            <p class="parrafo2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita excepturi
+                odit quia, itaque deserunt
+                recusandae reiciendis ratione, facilis sunt quo maiores nobis aliquam dolores, repellat neque inventore
+                hic nostrum dolor.</p>
+
+
+        </div>
+
+        <div id="Sección 2" style="background-image: url(img/fondo.jpg); background-size: 100%;">
+            <h2>Sección 2: LISTAS Y FONDOS</h2>
+            <ul>
+                <li>Elemento 1</li>
+                <ol>
+                    <li>Subelemento 1.1</li>
+                    <li>Subelemento 1.2</li>
+                    <li>Subelemento 1.3</li>
+                </ol>
+                <li>Elemento 2</li>
+                <ol>
+                    <li>Subelemento 2.1</li>
+                    <li>Subelemento 2.2</li>
+                    <li>Subelemento 2.3</li>
+                </ol>
+            </ul>
+        </div>
+
+
+        <div id="Sección 3">
+            <h2>Sección 3: TEXTO CON ESTILOS</h2>
+            <p style="line-height: 30px;"><span style="color: blue;">Este párrafo tiene un alto de linea de 30px y todo
+                    él es de color azul,</span><span style="color:red"> excepto esta parte que es de color rojo</span>
+            </p>
+            <p>Este segundo párrafo cotiene alguna palabreja en <i>cursiva</i>(como por ejemplo ésta) y alguna que otra
+                en <b>negrita</b>.</p>
+            <p>En este tercer párrafo escribiremos una fórmula matemática: a=l<sup>2</sup>. Y la fórmula del dióxido de
+                carbono: CO<sub>2</sub></p>
+            <p>En este párrafo tenemos un <del>texto tachado</del> y un texto <ins>que acabamos de añadir</ins></in>
+            </p>
+            <p><code>Y este párrafo es un ejemplo de código: for (f=1; f<=10; f++)</code></p>
+
+        </div>
+
+        <div id="Sección 4">
+            <h2>Sección 4: TABLAS Y ENLACE EXTERNO</h2>
+            <p style="text-align: center; margin-bottom: 0;">
+                <a href="https://www.google.es" target="_blank">Ir a google</a>
+            </p>
+            <table>
+                <tr>
+                    <th>Col 1</th>
+                    <th>Col 2</th>
+                    <th>Col 3</th>
+                </tr>
+                <tr>
+                    <td colspan="2">1.1</td>
+
+                    <td rowspan="3">1.2</td>
+                </tr>
+                <tr>
+                    <td>2.1</td>
+                    <td>2.2</td>
+
+                </tr>
+                <tr>
+                    <td>3.1</td>
+                    <td>3.2</td>
+
+                </tr>
+            </table>
+
+
+
+
+        </div>
+    
+    
+        <footer>
+            💻Actividad Evaluable UF.1💻
+            <a href="mailto:dvg9383@gmail.com" style="color: orange;">Contáctame</a>
+
+        </footer>
+    </main>
+
+</body>
+
+</html>

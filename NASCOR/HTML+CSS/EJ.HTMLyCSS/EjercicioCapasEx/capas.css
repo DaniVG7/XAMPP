@@ -1,0 +1,74 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; /*Para que a la hora de calcular tamaños no  cuenten los bordes y se calcule automaticamente*/
+}
+
+aside{
+    display: none;  /*Queremos que solo se muestre en el pc asi que de entrada display none*/
+}
+#contenedor{
+    max-width: 1200px;
+    margin: auto;
+    height: 100vh;
+}
+header{
+    background-color: lightcoral;
+    height: 100px;
+}
+main{
+    display: grid; /*podemos dar display grid y centrarla vertical y horizontalmente solo poniendo place items center */
+    background-color: lightcyan;
+    height: calc(100vh - 200px); /*el simbolo de resta se tiene que espaciar*/
+    place-items: center;
+}
+
+img{
+    width: 70%;
+    height: 90%;
+    overflow: hidden; /*Para que se mantenga la imagen dentro de la caja contenedora SIN salirse de ella (tambien overflow:auto).*/
+} 
+
+
+footer{
+    background-color: lightgreen;
+    height: 100px;
+}
+
+@media (min-width: 768px){
+    #contenedor{
+        display: grid;
+        grid-template-columns: 20% 80%; /*Aqui ya le damos el width por lo que luego no hace falta darselo*/
+        grid-template-areas: 'cabecera cabecera''aside main''footer footer'; /*Arriba declaramos que queremos dos columnas y aqui como se distribuyen y luego le daremos su nombre a cada elemento*/
+        /*grid-gap: 10px; Espaciado entre cajas*/
+
+    }
+    header{
+        grid-area: cabecera;
+    }
+    aside{
+        /*display: inline-block;*/ /*Una forma de colocar el aside a la izquierda es con display inline-block en ambas cajas ***forma1*** */
+        background-color: lightslategray;
+        height: calc(100vh - 200px);
+        /*width: 80%; Este width sobra ya que sino cogera el 80% del 20% y quedara una espacio entre medio */
+        display: block;
+        grid-area: aside;
+        /*display: block;
+        float: left;    Otra forma es dejandola en display block (ya que al inicio parte en display none y hacerle un float left  ***forma2*** */
+    }
+    main{
+        /*display: inline-block; display inline block en ambas cajas ***forma1*** */
+        grid-area: main;
+        }
+    
+    img{
+        width: 60%; /*Modificamos la anchura para que en pc no quede aplastada*/
+    }
+
+    footer{
+        /*clear: both;*/
+        grid-area: footer;
+    }
+
+    
+}

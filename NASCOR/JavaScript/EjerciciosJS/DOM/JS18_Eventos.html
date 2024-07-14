@@ -1,0 +1,58 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">	
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Ejercicio 18 - DOM básico y atributos XHTML</title>
+
+
+</head>
+
+<body>
+
+<p id="contenidos_1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.</p>
+<a id="enlace_1" href="#" >Ocultar contenidos</a>
+
+<br/>
+
+<p id="contenidos_2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.</p>
+<a id="enlace_2" href="#">Ocultar contenidos</a>
+
+<br/>
+
+<p id="contenidos_3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.</p>
+<a id="enlace_3" href="#">Ocultar contenidos</a>
+
+
+
+<script type="text/javascript">
+
+// Al parametro le llamaremos X en nuestra funcion siendo este el numero del enlace desde donde clickamos (si es en el enlace_2; x=2)
+    function muestraOculta(x) {
+        var parrafo = document.getElementById('contenidos_'+x); //Tomamos el parrafo correspondiente donde clickamos
+        var enlace = document.getElementById('enlace_'+x);  //Tomamos en enlace en el que clickamos
+    
+        if (parrafo.style.display !== 'none') {   //Creamos un condicional donde si el display es distitnto a none, al clickar se convertira en none
+            parrafo.style.display = 'none';       //Con esto conseguimos que desaparezca el párrafo.
+            enlace.innerHTML = 'Mostrar contenidos';  //Ademas cogeremos el enlace y le diremos que ahora ponga' Mostrar contenido'
+        } else {
+            parrafo.style.display = 'block';  // Sino, (si el display es none), al clickar lo convertiremos en display 'block'
+            enlace.innerHTML = 'Ocultar contenidos';  // Al ponerse en display block, el texto de la <a> se convertira en Ocultar contenidos
+        }
+    }
+
+    //creamos un evento funcion desde JS para no poner el onclick en el HTML (le asignaremos un parametro a cada una para cada parrafo/enlace.)
+    document.getElementById('enlace_1').onclick=function(){
+                                            muestraOculta(1);
+    }
+    document.getElementById('enlace_2').onclick=function(){
+                                            muestraOculta(2);
+    }
+    document.getElementById('enlace_3').onclick=function(){
+                                            muestraOculta(3);
+    }
+    //---------------------------------------------MUY  FAAAAAACIIIIIIL!!!! -------------------------------------------------------//
+    </script>
+</body>
+</html>

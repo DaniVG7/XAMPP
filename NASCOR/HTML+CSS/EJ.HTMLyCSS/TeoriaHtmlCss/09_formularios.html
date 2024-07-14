@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Formularios</title>
+
+    <style>
+        label{
+            width: 200px;
+            display: inline-block;
+            vertical-align: top; /*Esto es alinear etiquetas inline-block por la parte superior*/
+        }
+        
+    </style>
+
+    <script>
+        function enviar() {
+            window.alert("hola mundo")
+        }
+    </script>
+</head>
+<body>
+    <form action="procesarformulario.php" method="post">
+        <p>
+            <label for="Nombre">Nombre y Apellidos</label>
+            <input type="text" name="Nombre" id="Nombre" required pattern="[a-z A-Z]{1,30}" minlength="3" maxlength="30" autofocus>
+        </p>
+        <p> <label for="fecha">Fecha de nacimiento</label>
+            <input type="date" name="Fecha" id="fecha">
+        </p>
+        <p>
+            <label for="">Lugar de nacimiento</label>
+            <select name="Provincia" id="">
+                <option value="" disabled selected>Seleccione una provincia</option>
+                <option value="B">Barcelona</option>
+                <option value="T">Tarragona</option>
+                <option value="L">Lleida</option>
+                <option value="G">Girona</option>
+                
+            </select>
+        </p>
+        <p>
+            <label >Poblacion</label>
+            <input type="Poblacion" name="Poblacion" list="Poblaciones" required>
+            <datalist id="Poblaciones">
+                <option >Barcelona</option>
+                <option >Tarragona</option>
+                <option >Lleida</option>
+                <option >Girona</option>
+                <option >Sabadell</option>
+                <option >Badalona</option>
+            </datalist>
+            
+        </p>
+        <p>
+            <label for="Sueldo">Sueldo</label>
+            <input type="number" name="Salario" id="Sueldo" min="1" max="999999" step="0.01">
+        </p>
+        <p>
+            <label for="">Correo Electronico</label>
+            <input type="email" name="email" required placeholder="tucorreo@dominio.ext">
+        </p>
+        <p>
+            <label for="">Contraseña</label>
+            <input type="password" name="password" id="">
+        </p>
+        <p>
+            <label>Fecha y hora </label>
+            <input type="datetime-local">
+            
+        </p>
+
+        <p>
+            <label>Radio buttons</label>
+            <input type="radio" value="Si" name="opcion" checked>Si
+            <input type="radio" value="No" name="opcion">No
+        </p>
+        <p>
+            <label>Check boxes</label>
+            <input type="checkbox" value="1" name="opcion" checked disabled>Opcion 1
+            <input type="checkbox" value="2" name="opcion">Opcion 2
+            <input type="checkbox" value="3" name="opcion">Opcion 3
+            <input type="checkbox" value="4" name="opcion">Opcion 4
+        </p>
+        <p>
+            <label>Comentarios</label>
+            <textarea name="comentarios" cols="30" rows="5"></textarea>
+        </p>
+        <p>
+            <label>Archivo</label>
+            <input type="file">
+        </p>
+        <p>
+            <label>Telefono</label>
+            <input type="tel" name="telefono" pattern="[0-9]{9}">
+        </p>
+
+        <p>
+            <input type="submit" value="Confirmar">
+            
+            <input type="reset">
+        
+            <input type="button" value="enviar" onclick="enviar()">
+
+        </p>
+
+        <button>
+            <img src="imagenes/kings-league_logo-summa-1024x577.png" width="30px">
+        </button>    
+    
+   </form>
+    
+</body>
+</html>

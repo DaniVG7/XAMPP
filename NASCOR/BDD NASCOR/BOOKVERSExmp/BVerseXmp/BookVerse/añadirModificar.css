@@ -1,0 +1,227 @@
+/* Estilos generales */
+.cabecera{
+	display: none;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    margin: auto;
+	padding-right: 10px;
+    color: white;
+	position:relative;
+	margin:auto;
+	max-width: 1500px;
+	padding-bottom: 50px;
+	box-shadow: 0 0 250px #007BFF;
+	border-radius: 20px;
+	min-height: 100vh;
+}
+html{
+	height: 100%;
+}
+
+h2{
+	text-align: center;
+	padding-top: 50px
+}
+/* Estilos para botones */
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+	transition: 1s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    font-weight: bold;
+	font-size: 14px;
+	box-shadow: 0 0 45px #007BFF;
+}
+
+
+/* Estilos para el formulario de añadir autor */
+/* Estilos para el formulario de añadir libro */
+.formcurso {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+    padding: 30px 30px 60px 20px;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.formcurso label {
+    display: block;
+    margin-top: 10px;
+    text-align: left; /* Alinea el texto del label a la izquierda */
+}
+
+.formcurso input[type="text"],
+.formcurso input[type="date"],
+.formcurso input[type="password"]{
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #000;
+    background-color: transparent;
+    color: #000;
+}
+
+.formcurso input[type="text"]::placeholder,
+.formcurso input[type="date"]::placeholder {
+    color: #000;
+}
+
+.formcurso input[type="text"]:focus,
+.formcurso input[type="date"]:focus {
+    outline: none;
+}
+
+.formcurso input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.formcurso input[type="submit"]:hover {
+    background-color: #0056b3;
+    transition: 1s;
+    font-size: 17px;
+    font-weight: bold;
+	box-shadow: 0 0 45px #007BFF;
+}
+
+/* Estilos para el título del formulario */
+.formcurso h2 {
+    font-size: 24px;
+}
+
+
+.formcurso label {
+    display: block;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.formcurso input[type="text"],
+.formcurso input[type="number"],
+.formcurso textarea {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #000;
+    background-color: transparent;
+    color: #000;
+}
+
+.formcurso input[type="text"]::placeholder,
+.formcurso input[type="number"]::placeholder,
+.formcurso textarea::placeholder {
+    color: #000;
+}
+
+.formcurso input[type="text"]:focus,
+.formcurso input[type="number"]:focus,
+.formcurso textarea:focus {
+    outline: none;
+}
+
+.formcurso select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #000;
+    background-color: transparent;
+    color: #000;
+}
+
+.formcurso input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.formcurso input[type="submit"]:hover {
+    background-color: #0056b3;
+    transition: 1s;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/* Estilos para el título del formulario */
+.formcurso h2 {
+    font-size: 24px;
+}
+
+.formcurso p {
+    font-size: 14px;
+    color: #888;
+    margin-top: 5px;
+}
+
+/* Estilos para el aviso en el select */
+.formcurso select + p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #888;
+}
+
+.formcurso select {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #000;
+    background-color: transparent;
+    color: #000;
+}
+
+.formcurso select:focus {
+    outline: none;
+}
+
+/* Agregar un estilo para el select cuando está deshabilitado (opcional) */
+.formcurso select:disabled {
+    background-color: #ccc;
+    color: #888;
+}
+.modificarDatos {
+    position: relative;
+    width: max-content;
+    margin: auto;
+}
+
+.eliminar-container {
+    position: relative;
+	margin:auto;
+	width:500px;
+	margin-left:20%;
+
+}
+
+.eliminar {
+    position: absolute;
+    bottom: 10px;
+}
+.cambiar-contraseña{
+	position:relative;
+	width: 500px;
+	margin-left:50%;
+}
+.cambiarContraseña{
+	position: absolute;
+	bottom: 130%;
+}

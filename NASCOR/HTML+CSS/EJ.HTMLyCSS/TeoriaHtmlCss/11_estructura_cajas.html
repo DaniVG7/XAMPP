@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Estructura</title>
+    <style>
+        main{
+            width: 80%; /*anchoe de la caja contenedora */
+            margin: auto; /*centrar la caja contenedora */
+            border: 2px solid blue;
+            padding: 10px;   /*margen interior */      
+            max-width: 1500px;  /* con esto la pagina respetará el ancho de 80% mientras no supere los 1500px, (ancho maximo)*/      
+
+        }
+        header {
+            border: solid 2px green;
+            height: 80px;
+            margin-bottom: 10px;  /*margen exterior inferior */
+        }
+        nav{
+            border: 2px solid salmon;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+        section{
+            border: 2px solid grey;
+            /*height: 200px;*/
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        article{
+            border: 2px solid goldenrod;
+            height: 150px;
+            width: calc(50% - 6px); /*ancho de la caja para que al poner 2 articulos esten bien espaciados*/
+            display: inline-block; /*este es el display para que las cajas se situen una al lado de la otra */
+            vertical-align: top; /* alinea las cajas por la parte superior de las mismas */
+            margin-bottom: 5px;
+
+        }
+        footer{
+            border: 2px solid teal;
+            height: 30px;
+        }
+    </style>
+</head>
+    <main>
+        <header>
+            <img src="imagenes/kings-league_logo-summa-1024x577.png" height="60">
+        </header>
+        <nav></nav>
+        <section>
+            <article>
+                <h3>articulo 1</h3>
+            </article>
+            <article>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita non ad alias culpa assumenda dignissimos. Deleniti earum hic, laborum necessitatibus illum autem quisquam praesentium ex obcaecati, voluptatum labore placeat omnis.</p>
+            </article>
+            <article></article>
+            <article></article>
+        </section>
+        <section>
+            <article></article>
+            <article></article>
+        </section>
+        <footer></footer>
+    </main>
+<body>
+    
+</body>
+</html>

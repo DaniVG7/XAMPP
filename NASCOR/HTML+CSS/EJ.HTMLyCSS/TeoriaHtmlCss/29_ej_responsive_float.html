@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive2Float</title>
+</head>
+<style>  
+    *{
+        box-sizing: border-box;
+    }
+    img{
+        width: 300px;
+    }
+    .contenedor{
+        margin: auto ;
+        max-width: 1200px;
+    }
+    
+    @media (min-width: 500px) {
+        aside{
+            float: left;
+            width: /*20%*/ 200px;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        .quienessomos{
+            float: left;
+            width: /*80%*/ calc(100% - 200px); /*al ponerle que ocupe todo menos los 200px de la otra caja, no cabe a la izquierda !!!!!!!!!!!!!! Es aconsejable no trabajar en % porque en dispositivos moviles, un 20% puede ser un espacio MUUY pequeño.*/
+            box-sizing: border-box;
+            padding: 10px;
+
+        }
+        img{
+            float: right;
+        }
+
+        .columnas{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+            
+    }
+
+    
+    @media (min-width: 1100px) {
+        .contenedor{
+            width: 1024px;
+        }
+        .columnas{
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            
+        }
+        .columnas h3{
+            padding: 0;
+            margin: 0;
+        }
+        
+    }
+    
+
+</style>
+<body>
+    <div class="contenedor">
+        <aside class="dudas">
+            <h3>¿DUDAS?</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quia, quibusdam praesentium, ullam perferendis animi voluptatum quisquam mollitia, adipisci sequi natus? Earum, necessitatibus? Officia aliquid fugit ullam possimus itaque tenetur.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae aperiam placeat debitis quo vel excepturi laboriosam velit fugiat, voluptatem illo ipsam! Velit ut veniam nesciunt, dignissimos amet eos accusantium nam.</p>
+            <a href="mailto:dvg9383@gmail.com">Contacta con nosotros</a>
+        </aside>
+        <main class="quienessomos">
+            <h2>QUIENES SOMOS</h2>
+            <img src="imagenes/kings-league_logo-summa-1024x577.png" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quis minus nam voluptatibus nostrum dolores, expedita dolore aliquam voluptatum porro non, culpa quasi? Accusamus quis dolores esse molestiae reiciendis mollitia!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias animi aperiam aliquam, fugiat quasi nemo enim deserunt voluptatum, provident minima, molestiae esse eos! Natus amet obcaecati repudiandae earum quibusdam ipsum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam officia nihil tempore eos natus odio. Praesentium accusamus a quasi eveniet eaque nam rem omnis, maxime minima dignissimos veniam modi assumenda.</p>
+            
+        
+        
+            <section class="columnas">
+                <article>
+                <h3>DISEÑO</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis cum rerum, tenetur repellat accusamus voluptas quasi, cupiditate voluptates labore quisquam minima iure molestiae earum vero at aut. Praesentium, tempore molestias. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil illum impedit, aliquid odio similique amet explicabo eaque numquam iste cumque nulla, accusantium fugiat ducimus temporibus magnam vitae debitis molestias. Cum!</p>
+                </article>
+                <article>
+                <h3>DESARROLLO</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores tempora amet aliquid aliquam similique optio nemo quasi aut vero necessitatibus culpa, ratione ea repellat. Commodi non rerum esse iusto impedit. </p>
+                </article>
+                <article>
+                <h3>MARKETING</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A adipisci quis voluptas dolorem libero alias mollitia ut consequuntur, nam sit repudiandae commodi ad placeat! Qui aliquid ut eius possimus quo.</p>
+                </article>
+                <article>
+                <h3>ANALITICA</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, enim libero? Tempora nihil minus quasi iusto sint odit ut vero quaerat, ducimus architecto excepturi soluta vel alias necessitatibus dolore? Recusandae.</p>
+                </article>
+            </section>
+        </main>
+    
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS14 funciones cadenas</title>
+  </head>
+  <body>
+    Introduzca una cadena de palabras: <input type="text" id="cadenaPalabras">
+    <input type="button" value="Analizar Cadena" onclick="analizarCadena(
+        document.getElementById('cadenaPalabras').value
+    )">
+    
+    <div id="resultado"></div>
+
+
+    <script>
+      function analizarCadena(cadena) {
+        var letras = /^[a-zA-Z]+$/;
+        if(!letras.test(cadena)){
+            texto = '<span style=color:red>Introduce una cadena de PALABRAS!!</span>';
+        }else if (cadena == cadena.toUpperCase()) {
+          texto = "La cadena está formada solo por MAYÚSCULAS.";
+        } else if (cadena == cadena.toLowerCase()) {
+          texto = "La cadena está formada solo por minúsculas.";
+        } else {
+          texto = "La cadena es una mezcla de MAYÚSCULAS y minúsculas.";
+        }
+        document.getElementById('resultado').innerHTML = texto
+      }
+
+    </script>
+  </body>
+</html>

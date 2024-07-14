@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS13 Funciones</title>
+  </head>
+  <body>
+    Introduce un número: <input type="number" id="numero" />
+    <input type="button" value="Par o Impar" onclick="calcularParOImpar()" />
+
+    <script>
+      
+      function calcularParOImpar() {
+        var numero = Number(document.getElementById("numero").value);
+        while(numero <= 0 || !Number.isInteger(numero)){
+            alert ('Introduce un número entero positivo!')
+            return
+        }
+        if (numero%2 == 0) {
+          alert("Es un número PAR");
+        } else {
+          alert("Es un número IMPAR");
+        }
+      }
+    </script>
+  </body>
+</html>

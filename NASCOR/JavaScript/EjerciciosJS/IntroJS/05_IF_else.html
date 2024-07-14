@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF/ELSE</title>
+</head>
+<body>
+    <p id="nota">Tu nota es:</p>
+    
+    <script>
+        const nota = Number(prompt('Indica una nota'));
+        let LetraNota;
+        if ((nota<20) & (nota>=19)){
+            LetraNota= 'A'
+        } else if ((nota<=19) && (nota>=16)){
+            LetraNota= 'B'
+        } else if ((nota<16) && (nota>=12)){
+            LetraNota= 'C'
+        } else if ((nota<12) && (nota>=9)){
+            LetraNota= 'D'
+        } else if ((nota<9) && (nota>=0)){
+            LetraNota= 'E'
+        } else {
+            alert ("Introduzca una nota real!")
+        }
+        
+        document.getElementById("nota").innerHTML += " " + LetraNota
+        
+    </script>
+</body>
+</html>

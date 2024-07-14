@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Display</title>
+    <style>
+        main {
+            width: 60%;
+            margin: auto
+        }
+
+        section {
+            padding: 20px;
+            background-color: bisque;
+        }
+
+        div {
+            width: 25%;
+            height: 150px;
+            border: 2px solid blue;
+            background-color: aqua;
+        }
+
+        .display-inline-block div {
+            display: inline-block;
+            vertical-align: top;
+            /*alinear las cajas por la parte superior siempre va en este display*/
+            background-color: greenyellow; /*Se cambia el color de estas cajas ya que este selector es especifico*/
+            text-align: initial;
+        }
+        
+        .display-inline-block {
+            text-align: center; /*Con esto centramos las 3 cajas de dentro de la caja contenedora */
+                
+        }
+        .display-flex{
+            display: flex; /*se convierte todo el contenido de la caja contenedora en elementos flexibles */
+            flex-wrap: wrap;
+            justify-content:space-around; /*alineacion en el eje horizontal */
+            gap: 5px; /*Es un margen exterior que se aplica a TODAS las cajas de dentro de la caja contenedora */
+            align-items: center; /* para alinear verticalmente */
+        }
+        .display-none{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="display-block">
+            <div>
+                <p>Display Block</p>
+            </div>
+            <div></div>
+            <div></div>
+        </section>
+        <hr>
+        <section class="display-inline-block">
+            <div>
+                <p>Display inline-block</p>
+            </div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <hr>
+        <section class="display-flex">
+            <div>
+                <p>Display flex</p></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <hr>
+        <section class="display-none">
+            <div>
+                <p>Display None</p>
+            </div>
+            <div></div>
+            <div></div>
+        </section>
+    </main>
+</body> 
+
+</html>

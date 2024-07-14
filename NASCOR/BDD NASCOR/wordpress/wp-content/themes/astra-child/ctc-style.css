@@ -1,0 +1,150 @@
+/*
+CTC Separate Stylesheet
+Updated: 2023-11-16 13:03:29
+*/
+
+.entry-title{
+	visibility: hidden;
+}
+.uagb-tm__items {
+    visibility: visible;
+}
+.entry-content p {
+	margin-bottom: 0px;
+}
+.uagb-ifb-content{
+	text-align:center;
+}
+.uagb-ifb-content img {
+	height: 200px !important;
+}
+.ast-narrow-container .site-content > .ast-container {
+    max-width: 1000px;
+}
+
+.wp-block-uagb-container.uagb-block-a4b26e63{
+	opacity: 80%;
+}
+
+.wp-block-uagb-container.uagb-block-a4b26e63:hover{
+	opacity: 100%;
+	transition: 1s;
+}
+
+.uagb-ifb-button-wrapper .uagb-infobox-cta-link {
+    white-space: nowrap;
+}
+.has-text-align-center {
+    font-family: monospace;
+}
+
+.wp-block-button .wp-block-button__link, .wp-block-search .wp-block-search__button, body .wp-block-file .wp-block-file__button {
+
+    margin-top: 40px;
+
+}
+
+.block-editor-block-list__layout {
+    margin: 0 auto;
+}
+.uagb-ifb-content path{
+	visibility: hidden;
+}
+
+.wp-block-uagb-container.uagb-block-346e40a2 {
+    object-fit: cover;
+}
+
+.wp-block-uagb-container.uagb-block-346e40a2 {
+    min-height: 51vh;
+    box-shadow: 0px 0px   #00000070;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: !important;
+    margin-bottom: !important;
+    row-gap: 102px;
+    column-gap: 60px;
+    overflow: visible;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-style: none;
+    border-color: inherit;
+    background-repeat: repeat-x;
+    /* background-position: calc(50% +  -29px) calc(50% + 60px); */
+    background-size: auto;
+    /* background-attachment: scroll; */
+    background-image: url(https://nascor04.md360.es/wordpress/wp-content/uploads/2023/11/Bioenlinea-2.png);
+    background-repeat: no-repeat;
+    /* background-clip: padding-box; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* flex-wrap: nowrap; */
+    background-position: 50%;
+}
+
+svg{
+	margin-right: -20px;
+}
+
+}
+.wp-block-cover .wp-block-cover__inner-container, .wp-block-cover-image .wp-block-cover__inner-container {
+    color: inherit;
+    width: 100%;
+    display: grid;
+    z-index: 1;
+    place-items: center;
+}
+.wpcf7 form {
+    position: relative;
+    width: 200%;
+}
+
+.site-header-above-section-center.site-header-section.ast-flex.ast-grid-section-center {
+    display: none;
+}
+
+.ast-above-header-bar.ast-above-header.site-header-focus-item {
+    display: none;
+}
+
+.main-header-bar.ast-header-breadcrumb {
+	display: none;
+}
+.site-primary-footer-wrap.ast-builder-grid-row-container.site-footer-focus-item.ast-builder-grid-row-3-equal.ast-builder-grid-row-tablet-full.ast-builder-grid-row-mobile-full.ast-footer-row-stack.ast-footer-row-tablet-stack.ast-footer-row-mobile-stack {
+	display: none;
+}
+.site-below-footer-wrap.ast-builder-grid-row-container.site-footer-focus-item.ast-builder-grid-row-full.ast-builder-grid-row-tablet-full.ast-builder-grid-row-mobile-full.ast-footer-row-stack.ast-footer-row-tablet-stack.ast-footer-row-mobile-stack {
+	display: none;
+}
+
+
+#ast-scroll-top {
+    background-color: var(--ast-global-color-2);
+    font-size: 35px;
+    padding-right: 20px;
+    font-size: 2.0588235294118rem;
+}
+
+form.wpcf7-form.init {
+    width: 100%;
+}
+
+.wp-block-group.has-small-font-size.is-vertical.is-content-justification-right.is-layout-flex.wp-container-core-group-layout-1.wp-block-group-is-layout-flex {
+    width: max-content;
+    margin: auto;
+}
+
+form.wpcf7-form.sent {
+	width:100%;
+}
+
+.wp-block-uagb-container.uagb-block-346e40a2.alignfull.uagb-is-root-container {
+    margin-top: -150px;
+}
+
+

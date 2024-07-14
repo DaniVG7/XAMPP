@@ -1,0 +1,46 @@
+form {
+  margin: auto;
+  width: max-content;
+  margin-top: 40px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: lightsalmon;
+  border-radius: 10px;
+}
+#notas {
+  /* display: grid;
+  grid-template-columns: auto auto auto;
+  width: max-content; */
+  & input {
+    margin-right: 10px;
+    display: block;
+    margin-bottom: 5px;
+    height: 20px; /*Hay que darle altura a los inputs para que sean todos iguales ya que el type date es más alto que los demás y al añadir acaban descuadrando*/
+  } 
+  & input[type="number"]{
+    width: 40px;
+  }
+}
+
+pre {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1200px; /*El mismo ancho máximo que el max width de la cabecera para que no sobresalga*/
+  margin-top: 20px;
+  border: 2px solid green;
+  padding: 20px;
+  background-color: lightgreen;
+  border-radius: 10px;
+  & h1 {
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 450px) {    
+  #notas {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: max-content;
+  }
+}

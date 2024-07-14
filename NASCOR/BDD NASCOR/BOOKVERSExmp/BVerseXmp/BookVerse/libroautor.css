@@ -1,0 +1,53 @@
+/* Estilos generales */
+.cabecera {
+    display: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    margin: auto;
+    padding: 0;
+    color: white;
+    max-width: 1500px;
+    padding-bottom: 50px;
+}
+
+/* Estilos para botones */
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transition: 1s;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.vermas{
+	margin: auto;
+	text-align: center;
+	width: max-content;
+	max-width: 800px;
+	box-shadow: 0 0 250px #007BFF;
+	padding: 40px;
+
+}
+.sinopsis{
+	text-align: left;
+}
+
+h1{
+    text-transform: uppercase;
+}
